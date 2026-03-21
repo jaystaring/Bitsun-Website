@@ -1,0 +1,34 @@
+{
+  "title": "解决方案",
+  "subtitle": "深耕消费品行业，为不同行业提供定制化解决方案",
+  "industries": {
+    "title": "按行业",
+    "subtitle": "针对不同行业特点，提供专业化解决方案",
+    "items": [
+      {
+        "id": "beauty",
+        "title": "大美丽",
+        "description": "多品牌、多品类、多渠道运营，实现全链路数字化",
+        "icon": "beauty",
+        "href": "/solutions/industry/beauty",
+        "highlights": ["SKU管理", "库存共享", "智能配补"]
+      },
+      {
+        "id": "health",
+        "title": "大健康",
+        "description": "效期管理、批次追溯、全渠道一盘货运营",
+        "icon": "health",
+        "href": "/solutions/industry/health",
+        "highlights": ["效期管控", "批次追溯", "渠道管控"]
+      },
+      {
+        "id": "life",
+        "title": "大生活",
+        "description": "大件物流、售后服务、全渠道订单履约",
+        "icon": "life",
+        "href": "/solutions/industry/life",
+        "highlights": ["大件配送", "安装服务", "售后管理"]
+      }
+    ]
+  }
+}

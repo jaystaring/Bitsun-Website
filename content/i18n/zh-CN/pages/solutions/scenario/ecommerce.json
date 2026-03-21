@@ -1,0 +1,126 @@
+{
+  "id": "ecommerce",
+  "title": "电商运营智能",
+  "subtitle": "精细化策略赋能订单自动化率，自动对账提效，同时降低运营风险",
+  "hero": {
+    "title": "电商运营智能解决方案",
+    "subtitle": "电商全链路场景提效",
+    "description": "精细化策略赋能订单自动化率，降低运营风险，自动对账提效，实现电商运营的智能化升级。",
+    "stats": [
+      { "value": "90%", "label": "订单全链路自动化率" },
+      { "value": "50%", "label": "对接周期缩短" },
+      { "value": "95%", "label": "异常响应能力提升" },
+      { "value": "80%", "label": "对账效率提升" }
+    ]
+  },
+  "painPoints": {
+    "title": "核心痛点",
+    "subtitle": "多平台电商运营企业面临的典型挑战",
+    "items": [
+      {
+        "id": "multi-platform",
+        "title": "多平台接入挑战",
+        "description": "对接开发周期长，成本高。",
+        "icon": "platform"
+      },
+      {
+        "id": "manual-process",
+        "title": "订单人工介入多",
+        "description": "策略精细度不足带来的人工介入场景多。",
+        "icon": "process"
+      },
+      {
+        "id": "risk-control",
+        "title": "风控不足，带来资损",
+        "description": "出错和异常节点多，人工难第一时间发现，异常发现滞后，带来链式反应，引发资损。",
+        "icon": "risk"
+      },
+      {
+        "id": "reconciliation",
+        "title": "平台对账耗时耗力",
+        "description": "多平台账单格式不一，人工对账效率低，财务压力大，差异难以查明。",
+        "icon": "reconcile"
+      }
+    ]
+  },
+  "architecture": {
+    "title": "解决方案架构",
+    "subtitle": "电商全链路场景提效，实现电商运营自动化",
+    "layers": [
+      {
+        "name": "平台连接",
+        "description": "一站式电商连接器和快速对接能力",
+        "items": ["可配置电商连接器", "多平台统一管理", "实时数据同步"]
+      },
+      {
+        "name": "订单自动化",
+        "description": "订单全链路的精细化策略：解析-审核-处理-履约的自动执行",
+        "items": ["库存自动同步", "订单自动解析", "审核自动处理", "履约自动执行"]
+      },
+      {
+        "name": "电商对账",
+        "description": "平台对账自动化，自动匹配核销减轻财务压力",
+        "items": ["账单格式化", "科目匹配和自动核销", "异常处理和分析"]
+      },
+      {
+        "name": "风控管理",
+        "description": "基于异常场景的即时提醒、快速响应、减少影响",
+        "items": ["异常交易监控", "破价提醒熔断", "库存共享防超卖"]
+      }
+    ]
+  },
+  "features": {
+    "title": "核心功能",
+    "subtitle": "从平台连接到风控管理的全链路能力",
+    "items": [
+      {
+        "id": "platform-connection",
+        "title": "平台连接",
+        "description": "多平台统一管理与实时同步",
+        "features": ["可配置电商连接器", "多平台统一管理", "实时数据同步"],
+        "value": "可配置连接器，即插即用，对接周期缩短50%"
+      },
+      {
+        "id": "order-automation",
+        "title": "订单自动化",
+        "description": "全链路订单自动化处理",
+        "features": ["库存自动同步", "订单自动解析", "审核自动处理", "履约自动执行"],
+        "value": "全链路订单自动化，处理效率提升90%"
+      },
+      {
+        "id": "reconciliation",
+        "title": "电商对账",
+        "description": "平台对账自动化，自动匹配核销",
+        "features": ["账单格式化", "科目匹配和自动核销", "异常处理和分析"],
+        "value": "自动匹配核销，对账效率提升80%，减轻财务压力"
+      },
+      {
+        "id": "risk-mgmt",
+        "title": "风控管理",
+        "description": "异常监控与风险防控",
+        "features": ["异常交易监控", "破价提醒熔断", "库存共享防超卖"],
+        "value": "自动化异常监控，异常发现提升95%"
+      }
+    ]
+  },
+  "industries": {
+    "title": "适用行业",
+    "items": [
+      { "id": "beauty", "name": "大美丽", "description": "鞋服时尚、日化美妆（电商主力）" },
+      { "id": "health", "name": "大健康", "description": "医药流通、食品快消（O2O）" },
+      { "id": "life", "name": "大生活", "description": "家居家电、母婴用品（多平台）" }
+    ]
+  },
+  "products": {
+    "title": "关联产品",
+    "items": [
+      { "id": "ecommerce", "name": "星澜电商管理系统", "href": "/products/ecommerce" },
+      { "id": "omc-oms", "name": "星澜全渠道OMS", "href": "/products/omc-oms" }
+    ]
+  },
+  "cta": {
+    "title": "开启电商运营智能之旅",
+    "description": "联系我们，获取定制化解决方案",
+    "primaryButton": "预约演示"
+  }
+}

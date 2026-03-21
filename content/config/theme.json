@@ -1,0 +1,11 @@
+{
+  "colors": {
+    "primary": "#0066FF",
+    "secondary": "#00C2FF",
+    "accent": "#10B981"
+  },
+  "mode": "dark",
+  "fontFamily": {
+    "sans": ["Inter", "PingFang SC", "Microsoft YaHei", "sans-serif"]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "id": "merchandise",
+  "title": "商品运营智能",
+  "subtitle": "AI和算法赋能人专注决策，AI执行，驱动货如轮转",
+  "hero": {
+    "title": "商品运营智能解决方案",
+    "subtitle": "AI驱动的商品运营决策，优化库存与销售",
+    "description": "AI和算法赋能人专注决策，AI执行，驱动货如轮转。通过智能运营与AI智能体，实现商品运营的智能化升级。",
+    "stats": [
+      { "value": "100%", "label": "运营人效提升" },
+      { "value": "80%", "label": "人力节约" },
+      { "value": "29000min", "label": "月节省人时" },
+      { "value": "16→30", "label": "人均管理门店" }
+    ]
+  },
+  "painPoints": {
+    "title": "核心痛点",
+    "subtitle": "商品运营效率低的企业面临的典型挑战",
+    "items": [
+      {
+        "id": "manual-operation",
+        "title": "纯手工，人力高",
+        "description": "铺货、补货、调拨、清仓全手工在多表单导入，耗费大量人力。",
+        "icon": "manual"
+      },
+      {
+        "id": "low-efficiency",
+        "title": "依赖经验，无法管理",
+        "description": "商品运营等核心工作依赖人工经验，门槛高，水准无法管控，也难提升。",
+        "icon": "efficiency"
+      },
+      {
+        "id": "black-box",
+        "title": "维度单一，决策瓶颈",
+        "description": "人工考虑维度瓶颈，决策考量因素不足，有天然瓶颈。",
+        "icon": "blackbox"
+      },
+      {
+        "id": "no-trust",
+        "title": "无法沉淀，能力难提升",
+        "description": "消费者变化快，人力运营经验无法评估和沉淀，提升困难。",
+        "icon": "trust"
+      }
+    ]
+  },
+  "architecture": {
+    "title": "解决方案架构",
+    "subtitle": "四层架构设计，实现智能运营与决策闭环",
+    "layers": [
+      {
+        "name": "智能运营",
+        "description": "智能铺货、智能补货、智能调拨、智能清仓",
+        "items": ["智能铺货", "智能补货", "智能调拨", "智能清仓"]
+      },
+      {
+        "name": "AI智能体",
+        "description": "订单履约监控、缺货找货、货品运营调整",
+        "items": ["订单履约监控", "缺货找货", "货品运营调整"]
+      },
+      {
+        "name": "控制塔",
+        "description": "运营指标监控、异常预警、决策行动闭环",
+        "items": ["运营指标监控", "异常预警", "决策行动闭环"]
+      },
+      {
+        "name": "可运营能力",
+        "description": "白盒化配置、AI助理交互、仿真模拟推演",
+        "items": ["白盒化配置", "AI助理交互", "仿真模拟推演"]
+      }
+    ]
+  },
+  "features": {
+    "title": "核心功能",
+    "subtitle": "从智能运营到决策闭环的全链路能力",
+    "items": [
+      {
+        "id": "intelligent-operation",
+        "title": "智能运营",
+        "description": "铺补调退全生命周期智能运营",
+        "features": ["智能铺货", "智能补货", "智能调拨", "智能清仓"],
+        "value": "商品运营团队人效提升100%"
+      },
+      {
+        "id": "ai-agent",
+        "title": "AI智能体",
+        "description": "AI辅助的运营监控与调整",
+        "features": ["订单履约监控", "缺货找货", "货品运营调整"],
+        "value": "订单监控处理人力节约80%"
+      },
+      {
+        "id": "control-tower",
+        "title": "控制塔",
+        "description": "运营指标监控与决策行动闭环",
+        "features": ["运营指标监控", "异常预警", "决策行动闭环"],
+        "value": "从数据分析到决策建议到行动执行的闭环"
+      },
+      {
+        "id": "operable-capability",
+        "title": "可运营能力",
+        "description": "白盒化配置与仿真推演",
+        "features": ["白盒化配置", "AI助理交互", "仿真模拟推演"],
+        "value": "算法逻辑透明可配，策略上线前预判效果"
+      }
+    ]
+  },
+  "industries": {
+    "title": "适用行业",
+    "items": [
+      { "id": "beauty", "name": "大美丽", "description": "鞋服时尚、日化美妆（多SKU、生命周期短）" },
+      { "id": "health", "name": "大健康", "description": "医药流通、食品快消（效期管理）" },
+      { "id": "life", "name": "大生活", "description": "家居家电、母婴用品（大件物流）" }
+    ]
+  },
+  "products": {
+    "title": "关联产品",
+    "items": [
+      { "id": "ai", "name": "星智AI智能商品运营", "href": "/products/ai" },
+      { "id": "omc-oms", "name": "星澜全渠道OMS", "href": "/products/omc-oms" }
+    ]
+  },
+  "cta": {
+    "title": "开启商品运营智能之旅",
+    "description": "联系我们，获取定制化解决方案",
+    "primaryButton": "预约演示"
+  }
+}

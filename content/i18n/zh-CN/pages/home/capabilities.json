@@ -1,0 +1,38 @@
+{
+  "title": "核心场景解决方案",
+  "subtitle": "覆盖全渠道运营的核心场景，助力企业数智化转型",
+  "items": [
+    {
+      "id": "sales",
+      "title": "全渠道销售",
+      "description": "一个平台承载电商、分销、零售销售渠道，提升渠道协同，快速响应市场变化",
+      "icon": "sales",
+      "link": "/solutions/scenario/sales",
+      "metric": { "value": "50%", "label": "业务开展效率提升" }
+    },
+    {
+      "id": "omnichannel",
+      "title": "一盘货运营",
+      "description": "打破渠道壁垒，全局一盘棋运营，解决缺货，降整体库存",
+      "icon": "omnichannel",
+      "link": "/solutions/scenario/omnichannel",
+      "metric": { "value": "25%", "label": "缺货率降低" }
+    },
+    {
+      "id": "merchandise",
+      "title": "商品运营智能",
+      "description": "AI和算法赋能人专注决策，AI执行，驱动货如轮转",
+      "icon": "merchandise",
+      "link": "/solutions/scenario/merchandise",
+      "metric": { "value": "100%", "label": "运营人效提升" }
+    },
+    {
+      "id": "ecommerce",
+      "title": "电商运营智能",
+      "description": "精细化策略赋能订单自动化率，自动对账提效，同时降低运营风险",
+      "icon": "ecommerce",
+      "link": "/solutions/scenario/ecommerce",
+      "metric": { "value": "80%", "label": "订单全链路自动化提升" }
+    }
+  ]
+}

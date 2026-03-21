@@ -1,0 +1,8 @@
+{
+  "title": "开启AI时代的数智之旅",
+  "description": "预约专属演示，了解比升如何助力您的业务增长",
+  "buttons": [
+    { "text": "预约演示", "href": "/contact/demo", "type": "primary" },
+    { "text": "资源中心", "href": "/resources", "type": "secondary" }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "id": "omnichannel",
+  "title": "一盘货运营",
+  "subtitle": "全局一盘棋运营，货品效率最大化",
+  "hero": {
+    "title": "一盘货运营解决方案",
+    "subtitle": "全域一盘棋运营，货品效率最大化",
+    "description": "打破渠道壁垒，全局一盘棋运营，解决缺货，降整体库存。通过库存共享与智能调度，实现全渠道库存一体化管理。",
+    "stats": [
+      { "value": "11倍", "label": "可销库存放大" },
+      { "value": "100%", "label": "库存准确和可视" },
+      { "value": "20天", "label": "库存周转降低" },
+      { "value": "25%", "label": "缺货率降低" }
+    ]
+  },
+  "painPoints": {
+    "title": "核心痛点",
+    "subtitle": "多渠道库存管理企业面临的典型挑战",
+    "items": [
+      {
+        "id": "inventory-silo",
+        "title": "库存割裂",
+        "description": "渠道库存割裂，线上线下、直营分销库存无法共享。",
+        "icon": "inventory"
+      },
+      {
+        "id": "over-stock",
+        "title": "超卖缺货",
+        "description": "可销库存利用率低，超卖、缺货问题并存。",
+        "icon": "stock"
+      },
+      {
+        "id": "low-turnover",
+        "title": "周转低效",
+        "description": "多盘货下，库存周转率低，资金占用严重。",
+        "icon": "turnover"
+      },
+      {
+        "id": "blind-allocation",
+        "title": "盲目分配",
+        "description": "人工分配库存效率低，响应慢。",
+        "icon": "allocation"
+      }
+    ]
+  },
+  "architecture": {
+    "title": "解决方案架构",
+    "subtitle": "四层架构设计，实现库存共享与智能调度",
+    "layers": [
+      {
+        "name": "库存模型",
+        "description": "四层库存模型、多状态库存分层、ATP可承诺库存",
+        "items": ["四层库存模型", "多状态库存分层", "ATP可承诺库存"]
+      },
+      {
+        "name": "货通场景",
+        "description": "直营货通、分销货通、线下货通、线上一盘货、全域一盘货",
+        "items": ["直营货通", "分销货通", "线下货通", "线上一盘货", "全域一盘货"]
+      },
+      {
+        "name": "共享和履约策略",
+        "description": "库存精细共享、渠道动态分配、全局最优履约",
+        "items": ["库存精细共享", "渠道动态分配", "全局最优履约"]
+      },
+      {
+        "name": "预警管理",
+        "description": "效期预警、库龄预警、异常预警",
+        "items": ["效期预警", "库龄预警", "异常预警"]
+      }
+    ]
+  },
+  "features": {
+    "title": "核心功能",
+    "subtitle": "从库存模型到履约策略的全链路能力",
+    "items": [
+      {
+        "id": "inventory-model",
+        "title": "库存模型",
+        "description": "四层库存模型与多状态分层管理",
+        "features": ["四层库存模型", "多状态库存分层", "ATP可承诺库存"],
+        "value": "精准区分可用量，防止超卖"
+      },
+      {
+        "id": "cargo-scenarios",
+        "title": "货通场景",
+        "description": "五大货通场景覆盖全渠道",
+        "features": ["直营货通", "分销货通", "线下货通", "线上一盘货", "全域一盘货"],
+        "value": "全渠道库存共享，放大可销库存"
+      },
+      {
+        "id": "fulfillment-strategy",
+        "title": "共享和履约策略",
+        "description": "精细化共享与全局最优履约",
+        "features": ["库存精细共享", "渠道动态分配", "全局最优履约"],
+        "value": "全局最优履约决策，降低整体成本"
+      },
+      {
+        "id": "alert-mgmt",
+        "title": "预警管理",
+        "description": "效期、库龄、异常实时预警",
+        "features": ["效期预警", "库龄预警", "异常预警"],
+        "value": "库存问题实时预警，快速响应"
+      }
+    ]
+  },
+  "industries": {
+    "title": "适用行业",
+    "items": [
+      { "id": "beauty", "name": "大美丽", "description": "鞋服时尚、日化美妆（多SKU、快周转）" },
+      { "id": "health", "name": "大健康", "description": "医药流通、食品快消（效期管理）" },
+      { "id": "life", "name": "大生活", "description": "家居家电、母婴用品（大件物流）" }
+    ]
+  },
+  "products": {
+    "title": "关联产品",
+    "items": [
+      { "id": "omc-oms", "name": "星澜全渠道OMS", "href": "/products/omc-oms" },
+      { "id": "ai", "name": "星智AI智能商品运营", "href": "/products/ai" }
+    ]
+  },
+  "cta": {
+    "title": "开启一盘货运营之旅",
+    "description": "联系我们，获取定制化解决方案",
+    "primaryButton": "预约演示"
+  }
+}

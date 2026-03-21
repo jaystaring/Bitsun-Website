@@ -1,0 +1,127 @@
+{
+  "id": "sales",
+  "title": "全渠道销售",
+  "subtitle": "一个平台承载电商、分销、零售销售渠道，提升协同，快速响应市场变化",
+  "hero": {
+    "title": "全渠道销售解决方案",
+    "subtitle": "统一管理线上线下销售渠道",
+    "description": "一个平台承载电商、分销、零售销售渠道，提升协同，快速响应市场变化。实现全渠道销售一体化，打通渠道壁垒，提升运营效率。",
+    "stats": [
+      { "value": "50%", "label": "渠道管理效率提升" },
+      { "value": "60%", "label": "订单处理效率提升" },
+      { "value": "90%", "label": "对账效率提升" },
+      { "value": "30%", "label": "客户满意度提升" }
+    ]
+  },
+  "painPoints": {
+    "title": "核心痛点",
+    "subtitle": "多渠道销售企业面临的典型挑战",
+    "items": [
+      {
+        "id": "channel-silo",
+        "title": "渠道割裂，协同困难",
+        "description": "线上线下、直营分销渠道独立运营，各自一套系统，协同难。",
+        "icon": "channel"
+      },
+      {
+        "id": "price-chaos",
+        "title": "终端杂多，价格失控",
+        "description": "企业多业务模式多系统下，终端渠道价格体系无法影响，结果管理容易失控。",
+        "icon": "price"
+      },
+      {
+        "id": "policy-fail",
+        "title": "政策落地，传导低效",
+        "description": "渠道促销政策精细化不足，执行依靠人工传导，效果差。",
+        "icon": "policy"
+      },
+      {
+        "id": "market-respons",
+        "title": "市场变化快，响应速度慢",
+        "description": "市场模式和渠道红利变化快，无法快速响应业务变化，把握机会。",
+        "icon": "market"
+      }
+    ]
+  },
+  "architecture": {
+    "title": "解决方案架构",
+    "subtitle": "四层架构设计，实现渠道统一管理",
+    "layers": [
+      {
+        "name": "渠道中心",
+        "description": "全渠道档案管理、上下游伙伴视图、多维价格体系",
+        "items": ["全渠道档案管理", "上下游伙伴视图", "多维价格体系"]
+      },
+      {
+        "name": "销售管理",
+        "description": "多业务模式支撑、渠道协议与控销、精细化业务控制",
+        "items": ["多业务模式支撑", "渠道协议与控销", "精细化业务控制"]
+      },
+      {
+        "name": "订单履约",
+        "description": "2B/2C自动化审单、智能拆单合单、白盒化可运营寻源",
+        "items": ["2B/2C自动化审单", "智能拆单合单", "白盒化可运营寻源"]
+      },
+      {
+        "name": "结算管理",
+        "description": "多场景分润配置、多凭证自动生成、智能渠道对账",
+        "items": ["多场景分润配置", "多凭证自动生成", "智能渠道对账"]
+      }
+    ]
+  },
+  "features": {
+    "title": "核心功能",
+    "subtitle": "从渠道管理到结算的全链路能力",
+    "items": [
+      {
+        "id": "channel-center",
+        "title": "渠道中心",
+        "description": "统一管理全渠道档案与价格体系",
+        "features": ["全渠道档案管理", "上下游伙伴视图", "多维价格体系"],
+        "value": "统一渠道档案，减少跨系统操作"
+      },
+      {
+        "id": "sales-mgmt",
+        "title": "销售管理",
+        "description": "多业务模式支撑与精细化控制",
+        "features": ["多业务模式支撑", "渠道协议与控销", "精细化业务控制"],
+        "value": "支持经销、代销、常规、直发等多种模式"
+      },
+      {
+        "id": "order-fulfillment",
+        "title": "订单履约",
+        "description": "自动化审单与智能履约",
+        "features": ["2B/2C自动化审单", "智能拆单合单", "白盒化可运营寻源"],
+        "value": "自动化审单，减少人工干预"
+      },
+      {
+        "id": "settlement",
+        "title": "结算管理",
+        "description": "自动化结算与智能对账",
+        "features": ["多场景分润配置", "多凭证自动生成", "智能渠道对账"],
+        "value": "自动化对账，快速定位差异"
+      }
+    ]
+  },
+  "industries": {
+    "title": "适用行业",
+    "items": [
+      { "id": "beauty", "name": "大美丽", "description": "鞋服时尚、日化美妆" },
+      { "id": "health", "name": "大健康", "description": "医药流通、食品快消" },
+      { "id": "life", "name": "大生活", "description": "家居家电、母婴用品" }
+    ]
+  },
+  "products": {
+    "title": "关联产品",
+    "items": [
+      { "id": "omc-oms", "name": "星澜全渠道OMS", "href": "/products/omc-oms" },
+      { "id": "distribution", "name": "星澜分销管理系统", "href": "/products/distribution" },
+      { "id": "pos", "name": "星澜门店管理系统", "href": "/products/pos" }
+    ]
+  },
+  "cta": {
+    "title": "开启全渠道销售一体化之旅",
+    "description": "联系我们，获取定制化解决方案",
+    "primaryButton": "预约演示"
+  }
+}

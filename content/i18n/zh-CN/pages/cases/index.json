@@ -1,0 +1,59 @@
+{
+  "title": "客户信赖之选",
+  "subtitle": "头部客户的选择与信任",
+  "categories": [
+    { "id": "beauty", "title": "大美丽" },
+    { "id": "health", "title": "大健康" },
+    { "id": "life", "title": "大生活" }
+  ],
+  "logos": {
+    "beauty": [
+      { "id": "ur", "name": "UR", "src": "/images/clients/beauty/UR.png" },
+      { "id": "zhongmian", "name": "中免", "src": "/images/clients/beauty/中免.png" },
+      { "id": "anzheng", "name": "安正", "src": "/images/clients/beauty/安正.png" },
+      { "id": "anta", "name": "安踏", "src": "/images/clients/beauty/安踏.png" },
+      { "id": "fila", "name": "斐乐", "src": "/images/clients/beauty/斐乐.png" },
+      { "id": "senma", "name": "森马", "src": "/images/clients/beauty/森马.png" },
+      { "id": "jiaonei", "name": "焦内", "src": "/images/clients/beauty/焦内.png" },
+      { "id": "aiwei", "name": "爱唯", "src": "/images/clients/beauty/爱唯.png" },
+      { "id": "xtep", "name": "特步", "src": "/images/clients/beauty/特步.png" },
+      { "id": "yingjia", "name": "赢家", "src": "/images/clients/beauty/赢家-左右结构.png" },
+      { "id": "yingtong", "name": "颖通", "src": "/images/clients/beauty/颖通.png" }
+    ],
+    "health": [
+      { "id": "guoyao", "name": "国药", "src": "/images/clients/health/国药.png" },
+      { "id": "guangyao", "name": "广药", "src": "/images/clients/health/广药.png" },
+      { "id": "hengchang", "name": "恒昌医药", "src": "/images/clients/health/恒昌医药.png" },
+      { "id": "yangzijiang", "name": "扬子江", "src": "/images/clients/health/扬子江.png" },
+      { "id": "laiyifen", "name": "来伊份", "src": "/images/clients/health/来伊份.png" },
+      { "id": "zhengdatianqing", "name": "正大天晴", "src": "/images/clients/health/正大天晴.png" },
+      { "id": "lvyekj", "name": "绿叶科技", "src": "/images/clients/health/绿叶科技.png" },
+      { "id": "yingshi", "name": "英氏", "src": "/images/clients/health/英氏.png" },
+      { "id": "xinrongmao", "name": "鑫荣懋", "src": "/images/clients/health/鑫荣懋.png" },
+      { "id": "maiquer", "name": "麦趣尔", "src": "/images/clients/health/麦趣尔.png" }
+    ],
+    "life": [
+      { "id": "joyoung", "name": "九阳", "src": "/images/clients/life/九阳.png" },
+      { "id": "fenghuangxinhua", "name": "凤凰新华", "src": "/images/clients/life/凤凰新华.png" },
+      { "id": "csg", "name": "南方电网", "src": "/images/clients/life/南方电网.png" },
+      { "id": "yingzi", "name": "影子科技", "src": "/images/clients/life/影子科技.png" },
+      { "id": "yangxiang", "name": "扬翔股份", "src": "/images/clients/life/扬翔股份.png" },
+      { "id": "fujianzhongyan", "name": "福建中烟", "src": "/images/clients/life/福建中烟.png" },
+      { "id": "liby", "name": "立白", "src": "/images/clients/life/立白.png" },
+      { "id": "mikeyingfu", "name": "麦克英孚", "src": "/images/clients/life/麦克英孚.png" }
+    ]
+  },
+  "contact": {
+    "text": "需了解更多内容，请联系我们或添加比升微信公众号",
+    "qrcode": "/images/qrcode-wechat.png"
+  },
+  "stats": {
+    "title": "客户信赖之选",
+    "items": [
+      { "value": "30+", "label": "行业头部客户" },
+      { "value": "100+", "label": "品牌覆盖" },
+      { "value": "1000亿+", "label": "年订单处理量" },
+      { "value": "99.9%", "label": "系统可用性" }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "资源中心",
+  "subtitle": "获取行业洞察、产品白皮书、视频资料等优质内容",
+  "categories": [
+    { "id": "all", "label": "全部" },
+    { "id": "whitepaper", "label": "白皮书" },
+    { "id": "video", "label": "视频资料" }
+  ],
+  "featured": {
+    "title": "推荐资源",
+    "items": [
+      {
+        "id": "pdf-2026",
+        "type": "whitepaper",
+        "typeLabel": "白皮书",
+        "title": "比升消费品行业产品和解决方案",
+        "description": "全面介绍比升消费品行业产品体系与解决方案，涵盖全渠道业务中台、分销管理、电商管理、门店管理、AI智能商品运营等核心产品能力与价值",
+        "downloadUrl": "/resources/bitsun-solutions-2026.pdf",
+        "date": "2026-01",
+        "tags": ["产品介绍", "解决方案", "消费品"]
+      }
+    ]
+  },
+  "resources": [
+    {
+      "id": "pdf-2026",
+      "type": "whitepaper",
+      "typeLabel": "白皮书",
+      "title": "比升消费品行业产品和解决方案",
+      "description": "全面介绍比升消费品行业产品体系与解决方案，涵盖全渠道业务中台、分销管理、电商管理、门店管理、AI智能商品运营等核心产品能力与价值",
+      "downloadUrl": "/resources/bitsun-solutions-2026.pdf",
+      "date": "2026-01",
+      "tags": ["产品介绍", "解决方案", "消费品"]
+    },
+    {
+      "id": "video-ai-agent",
+      "type": "video",
+      "typeLabel": "视频资料",
+      "title": "企业复杂业务场景「真能干活儿」的智能助理发布",
+      "description": "比升技术发布企业复杂业务场景智能助理，展示AI Agent在商品运营、库存管理、订单处理等场景的实际应用能力",
+      "videoUrl": "/resources/ai-agent-demo.mp4",
+      "duration": "完整版",
+      "date": "2026-01",
+      "tags": ["AI Agent", "智能助理", "产品发布"]
+    }
+  ],
+  "newsletter": {
+    "title": "订阅我们的资讯",
+    "description": "获取最新行业洞察、产品动态与活动信息",
+    "placeholder": "请输入您的邮箱",
+    "button": "订阅"
+  }
+}

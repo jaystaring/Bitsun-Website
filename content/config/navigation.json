@@ -1,0 +1,63 @@
+{
+  "mainNav": [
+    { "id": "home", "label": "首页", "href": "/" },
+    {
+      "id": "products",
+      "label": "产品",
+      "href": "/products",
+      "children": [
+        {
+          "id": "xinglan",
+          "label": "星澜系列",
+          "children": [
+            { "id": "omc-oms", "label": "全渠道业务中台", "href": "/products/omc-oms", "tag": { "text": "核心", "type": "primary" } },
+            { "id": "distribution", "label": "分销管理系统", "href": "/products/distribution" },
+            { "id": "ecommerce", "label": "电商管理系统", "href": "/products/ecommerce" },
+            { "id": "pos", "label": "门店管理系统", "href": "/products/pos" },
+            { "id": "merchandise", "label": "智能商品运营", "href": "/products/ai", "tag": { "text": "AI", "type": "accent" } }
+          ]
+        },
+        {
+          "id": "xingzhi",
+          "label": "星智系列",
+          "children": [
+            { "id": "ai-platform", "label": "AI智能底座", "href": "/products/ai-platform", "tag": { "text": "敬请期待", "type": "accent" } },
+            { "id": "ai-agent", "label": "企业AI场景能力智能体", "href": "/products/ai-agent", "tag": { "text": "敬请期待", "type": "accent" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solutions",
+      "label": "解决方案",
+      "href": "/solutions",
+      "children": [
+        {
+          "id": "by-industry",
+          "label": "按行业",
+          "children": [
+            { "id": "beauty", "label": "大美丽", "href": "/solutions/industry/beauty" },
+            { "id": "health", "label": "大健康", "href": "/solutions/industry/health" },
+            { "id": "life", "label": "大生活", "href": "/solutions/industry/life" }
+          ]
+        },
+        {
+          "id": "by-scenario",
+          "label": "按场景",
+          "children": [
+            { "id": "omnichannel", "label": "全渠道一盘货", "href": "/solutions/scenario/omnichannel" },
+            { "id": "sales", "label": "全渠道销售", "href": "/solutions/scenario/sales" },
+            { "id": "merchandise", "label": "商品运营智能", "href": "/solutions/scenario/merchandise" },
+            { "id": "ecommerce", "label": "电商运营智能", "href": "/solutions/scenario/ecommerce" }
+          ]
+        }
+      ]
+    },
+    { "id": "cases", "label": "客户案例", "href": "/cases" },
+    { "id": "resources", "label": "资源中心", "href": "/resources" },
+    { "id": "about", "label": "关于我们", "href": "/about" }
+  ],
+  "ctaNav": [
+    { "id": "demo", "label": "预约演示", "href": "/contact/demo", "type": "primary" }
+  ]
+}

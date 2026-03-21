@@ -1,0 +1,43 @@
+{
+  "id": "hero",
+  "title": "AI时代企业数智服务商",
+  "subtitle": "提供全渠道大商品运营一站式解决方案，助力企业实现销售最大化、成本最小化",
+  "coreTags": [
+    {
+      "title": "AI原生中台底座",
+      "subtitle": "稳定可靠",
+      "icon": "platform"
+    },
+    {
+      "title": "轻咨询",
+      "subtitle": "共创价值",
+      "icon": "consulting"
+    },
+    {
+      "title": "AI赋能",
+      "subtitle": "深融业务场景",
+      "icon": "ai"
+    }
+  ],
+  "cta": {
+    "primary": {
+      "text": "预约演示",
+      "href": "/contact/demo"
+    },
+    "secondary": {
+      "text": "了解更多",
+      "href": "/products"
+    }
+  },
+  "background": {
+    "type": "image",
+    "src": "/images/hero/bg-main.jpg",
+    "alt": "科技感背景",
+    "overlay": true
+  },
+  "highlights": [
+    { "value": "20%", "label": "库存周转提升" },
+    { "value": "150%", "label": "缺货销售增长" },
+    { "value": "8%", "label": "毛利提升" }
+  ]
+}

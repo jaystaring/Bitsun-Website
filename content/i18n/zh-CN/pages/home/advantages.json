@@ -1,0 +1,27 @@
+{
+  "title": "核心优势",
+  "subtitle": "行业领先的技术实力与服务能力",
+  "items": [
+    {
+      "id": "lighthouse",
+      "title": "行业头部灯塔客户",
+      "description": "安踏、特步、森马、UR等头部客户验证，实践出真知",
+      "icon": "lighthouse",
+      "highlights": ["安踏集团", "特步集团", "森马集团", "UR快时尚"]
+    },
+    {
+      "id": "platform",
+      "title": "面向未来的平台架构",
+      "description": "用户中心、商品中心、库存中心、订单中心、结算中心、策略中心六大核心能力",
+      "icon": "platform",
+      "highlights": ["多组织多品牌", "百亿订单验证", "配置化结算"]
+    },
+    {
+      "id": "deep",
+      "title": "深耕消费品行业",
+      "description": "鞋服、快消、医药等全行业覆盖，端到端服务能力",
+      "icon": "deep",
+      "highlights": ["鞋服时尚", "食品快消", "医药流通", "日化美妆"]
+    }
+  ]
+}

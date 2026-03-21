@@ -1,0 +1,26 @@
+{
+  "name": "比升技术",
+  "nameEn": "Bitsun",
+  "description": "AI时代企业数智服务商",
+  "slogan": "提供全渠道大商品运营一站式解决方案",
+  "url": "https://www.bitsun-inc.com",
+  "logo": {
+    "light": "/images/logo-light.svg",
+    "dark": "/images/logo-dark.svg"
+  },
+  "contact": {
+    "email": "marketing@bitsun-inc.com",
+    "phone": "021-52231078",
+    "address": ""
+  },
+  "social": {
+    "wechat": "/images/qrcode-wechat.jpg",
+    "linkedin": "",
+    "weibo": ""
+  },
+  "footer": {
+    "copyright": "Copyright © 2020 上海比升互联网技术有限公司 All Rights Reserved",
+    "icp": "沪ICP备18023095号-1",
+    "icpNumber": "31011202008526"
+  }
+}
