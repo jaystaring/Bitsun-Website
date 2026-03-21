@@ -19,12 +19,23 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const indexPath = path.join(process.cwd(), DEMOS_DIR, 'index.json');
-    let demos: any[] = [];
+    const demosDir = path.join(process.cwd(), DEMOS_DIR);
+    const demos: any[] = [];
 
-    if (fs.existsSync(indexPath)) {
-      const content = fs.readFileSync(indexPath, 'utf-8');
-      demos = JSON.parse(content);
+    if (fs.existsSync(demosDir)) {
+      const files = fs.readdirSync(demosDir).filter(f => f.startsWith('contact-') && f.endsWith('.json'));
+      
+      for (const file of files) {
+        const filePath = path.join(demosDir, file);
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const data = JSON.parse(content);
+        demos.push({
+          fileName: file,
+          ...data,
+        });
+      }
+
+      demos.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
     }
 
     return NextResponse.json({ success: true, demos });

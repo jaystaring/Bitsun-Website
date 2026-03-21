@@ -29,23 +29,27 @@ export async function PUT(
       return NextResponse.json({ success: false, message: '无效的状态' }, { status: 400 });
     }
 
+    const filePath = path.join(process.cwd(), DEMOS_DIR, fileName);
+    
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json({ success: false, message: '记录不存在' }, { status: 404 });
+    }
+
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const data = JSON.parse(content);
+    data.status = status;
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+
     const indexPath = path.join(process.cwd(), DEMOS_DIR, 'index.json');
-    
-    if (!fs.existsSync(indexPath)) {
-      return NextResponse.json({ success: false, message: '记录不存在' }, { status: 404 });
+    if (fs.existsSync(indexPath)) {
+      const indexContent = fs.readFileSync(indexPath, 'utf-8');
+      const index = JSON.parse(indexContent);
+      const idx = index.findIndex((d: any) => d.fileName === fileName);
+      if (idx !== -1) {
+        index[idx].status = status;
+        fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
+      }
     }
-
-    const content = fs.readFileSync(indexPath, 'utf-8');
-    const demos = JSON.parse(content);
-    
-    const index = demos.findIndex((d: any) => d.fileName === fileName);
-    
-    if (index === -1) {
-      return NextResponse.json({ success: false, message: '记录不存在' }, { status: 404 });
-    }
-
-    demos[index].status = status;
-    fs.writeFileSync(indexPath, JSON.stringify(demos, null, 2));
 
     return NextResponse.json({ success: true });
   } catch (error) {

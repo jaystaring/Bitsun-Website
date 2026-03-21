@@ -1,5 +1,5 @@
 .container {
-  max-width: 1400px;
+  max-width: 1600px;
 }
 
 .loading {
@@ -21,29 +21,37 @@
   background: rgba(20, 27, 45, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .tableHeader {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr 1.5fr 1.5fr 1fr 1fr;
-  gap: 16px;
-  padding: 16px 24px;
+  grid-template-columns: 80px 120px 80px 100px 150px 150px 140px 100px 80px;
+  gap: 12px;
+  padding: 16px 20px;
   background: rgba(255, 255, 255, 0.02);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--color-text-secondary);
+  white-space: nowrap;
 }
 
 .tableRow {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr 1.5fr 1.5fr 1fr 1fr;
-  gap: 16px;
-  padding: 16px 24px;
+  grid-template-columns: 80px 120px 80px 100px 150px 150px 140px 100px 80px;
+  gap: 12px;
+  padding: 14px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-text-primary);
   align-items: center;
+  white-space: nowrap;
+}
+
+.solutionsCell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
 }
 
 .empty {
@@ -53,11 +61,12 @@
 }
 
 .statusSelect {
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 6px;
   font-size: 12px;
   border: none;
   cursor: pointer;
+  background: rgba(20, 27, 45, 1);
 }
 
 .statusSelect.pending {
@@ -126,6 +135,29 @@
   width: 100px;
   color: var(--color-text-secondary);
   flex-shrink: 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+
+.status.contacted {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+.status.converted {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
 }
 
 .closeBtn {

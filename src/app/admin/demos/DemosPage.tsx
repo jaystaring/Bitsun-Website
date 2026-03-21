@@ -3,6 +3,17 @@
 import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
+const solutionLabels: Record<string, string> = {
+  'omnichannel': '一盘货运营',
+  'sales': '全渠道销售',
+  'merchandise': '商品运营智能',
+  'ecommerce': '电商运营智能',
+  'beauty': '大美丽行业方案',
+  'health': '大健康行业方案',
+  'life': '大生活行业方案',
+  'other': '其他需求',
+};
+
 interface Demo {
   fileName: string;
   name: string;
@@ -56,6 +67,21 @@ export default function DemosPage() {
     }
   };
 
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleString('zh-CN', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };
+
+  const getSolutionsLabel = (solutions: string[] | undefined) => {
+    if (!solutions || solutions.length === 0) return '-';
+    return solutions.map(s => solutionLabels[s] || s).join('、');
+  };
+
   if (loading) {
     return <div className={styles.loading}>加载中...</div>;
   }
@@ -68,8 +94,10 @@ export default function DemosPage() {
         <div className={styles.tableHeader}>
           <span>姓名</span>
           <span>公司</span>
+          <span>职位</span>
           <span>手机</span>
           <span>邮箱</span>
+          <span>感兴趣方案</span>
           <span>提交时间</span>
           <span>状态</span>
           <span>操作</span>
@@ -78,9 +106,11 @@ export default function DemosPage() {
           <div key={demo.fileName} className={styles.tableRow}>
             <span>{demo.name}</span>
             <span>{demo.company}</span>
+            <span>{demo.position || '-'}</span>
             <span>{demo.phone}</span>
             <span>{demo.email}</span>
-            <span>{new Date(demo.createdAt).toLocaleString('zh-CN')}</span>
+            <span className={styles.solutionsCell}>{getSolutionsLabel(demo.solutions)}</span>
+            <span>{formatDate(demo.createdAt)}</span>
             <span>
               <select
                 value={demo.status || 'pending'}
@@ -131,7 +161,7 @@ export default function DemosPage() {
               </div>
               <div className={styles.detailItem}>
                 <span className={styles.label}>感兴趣方案：</span>
-                <span>{selectedDemo.solutions?.join('、') || '-'}</span>
+                <span>{getSolutionsLabel(selectedDemo.solutions)}</span>
               </div>
               <div className={styles.detailItem}>
                 <span className={styles.label}>留言：</span>
@@ -143,7 +173,13 @@ export default function DemosPage() {
               </div>
               <div className={styles.detailItem}>
                 <span className={styles.label}>提交时间：</span>
-                <span>{new Date(selectedDemo.createdAt).toLocaleString('zh-CN')}</span>
+                <span>{formatDate(selectedDemo.createdAt)}</span>
+              </div>
+              <div className={styles.detailItem}>
+                <span className={styles.label}>状态：</span>
+                <span className={`${styles.status} ${styles[selectedDemo.status || 'pending']}`}>
+                  {selectedDemo.status === 'contacted' ? '已联系' : selectedDemo.status === 'converted' ? '已转化' : '待处理'}
+                </span>
               </div>
             </div>
             <button onClick={() => setSelectedDemo(null)} className={styles.closeBtn}>
