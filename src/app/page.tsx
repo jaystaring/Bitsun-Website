@@ -15,8 +15,8 @@ import Image from 'next/image';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: '比升科技 - 企业级全渠道运营解决方案',
-  description: '比升科技专注为企业提供全渠道运营解决方案，包括星澜全渠道业务中台、星澜智能商品运营等产品，服务安踏、特步、森马等头部品牌。',
+  title: '比升技术 - AI时代企业数智服务商',
+  description: '比升技术专注为企业提供AI时代数智化解决方案，包括星澜全渠道业务中台、星智AI智能底座等产品，服务安踏、特步、森马等头部品牌。',
   openGraph: {
     title: '比升科技 - 企业级全渠道运营解决方案',
     description: '比升科技专注为企业提供全渠道运营解决方案，服务安踏、特步、森马等头部品牌。',

@@ -89,6 +89,9 @@ export default function Header({ navigation, site }: HeaderProps) {
           </nav>
 
           <div className={styles.cta}>
+            <Link href="/login" className={styles.loginLink}>
+              登录
+            </Link>
             {navigation.ctaNav.map((cta) => (
               cta.label === '预约演示' ? (
                 <button 

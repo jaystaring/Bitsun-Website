@@ -87,7 +87,7 @@ const productMatrix: ProductSeries[] = [
       },
       {
         id: 'ai-agent',
-        name: '企业AI场景能力智能体',
+        name: '企业场景能力智能体',
         nameEn: 'AI Agent Suite',
         href: '/products/ai-agent',
         description: '面向企业复杂业务场景的AI Agent套件',

@@ -154,6 +154,18 @@
   gap: 12px;
 }
 
+.loginLink {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast);
+}
+
+.loginLink:hover {
+  color: var(--color-text-primary);
+}
+
 .ctaButton {
   padding: 10px 20px;
   font-size: 14px;

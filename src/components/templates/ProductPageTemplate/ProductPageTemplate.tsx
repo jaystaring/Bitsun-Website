@@ -498,12 +498,12 @@ const productScenarios: Record<string, Array<{ title: string; description: strin
 export default function ProductPageTemplate({ product }: ProductPageTemplateProps) {
   const productImages: Record<string, string> = {
     'omc-oms': '/images/products/product-oms-hero.jpg',
-    'distribution': '/images/products/product-oms-hero.jpg',
+    'distribution': '/images/products/product-distribution.png',
     'ecommerce': '/images/products/product-ecommerce-hero.jpg',
     'pos': '/images/products/product-pos-hero.jpg',
     'ai': '/images/products/product-ai-hero.jpg',
-    'ai-platform': '/images/products/product-ai-hero.jpg',
-    'ai-agent': '/images/products/product-ai-hero.jpg',
+    'ai-platform': '/images/products/product-ai-platform.png',
+    'ai-agent': '/images/products/product-ai-agent.png',
   };
 
   const modules = productModules[product.id] || [];

@@ -1,6 +1,6 @@
 ---
 id: ai-agent
-title: 星智企业AI场景能力智能体
+title: 星智企业场景能力智能体
 subtitle: 面向企业复杂业务场景的AI Agent套件
 category: ai-product
 tags: ["AI", "Agent", "智能体", "商品运营", "财务对账"]

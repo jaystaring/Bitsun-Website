@@ -22,7 +22,7 @@
           "label": "星智系列",
           "children": [
             { "id": "ai-platform", "label": "AI智能底座", "href": "/products/ai-platform", "tag": { "text": "敬请期待", "type": "accent" } },
-            { "id": "ai-agent", "label": "企业AI场景能力智能体", "href": "/products/ai-agent", "tag": { "text": "敬请期待", "type": "accent" } }
+            { "id": "ai-agent", "label": "企业场景能力智能体", "href": "/products/ai-agent", "tag": { "text": "敬请期待", "type": "accent" } }
           ]
         }
       ]
