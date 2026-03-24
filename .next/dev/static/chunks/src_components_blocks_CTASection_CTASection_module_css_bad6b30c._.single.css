@@ -1,0 +1,119 @@
+/* [project]/src/components/blocks/CTASection/CTASection.module.css [app-client] (css) */
+.CTASection-module___1t1MW__section {
+  background: var(--color-bg-primary);
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.CTASection-module___1t1MW__background {
+  background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  position: absolute;
+  inset: 0;
+}
+
+.CTASection-module___1t1MW__bgImage {
+  object-fit: cover;
+  opacity: .3;
+}
+
+.CTASection-module___1t1MW__glow {
+  filter: blur(60px);
+  background: radial-gradient(circle, #0066ff4d 0%, #0000 70%);
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.CTASection-module___1t1MW__container {
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+.CTASection-module___1t1MW__title {
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.CTASection-module___1t1MW__description {
+  color: var(--color-text-secondary);
+  margin-bottom: 40px;
+  font-size: 1.125rem;
+}
+
+.CTASection-module___1t1MW__buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  display: flex;
+}
+
+.CTASection-module___1t1MW__button {
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-fast);
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.CTASection-module___1t1MW__primary {
+  color: #fff;
+  background: var(--gradient-primary);
+}
+
+.CTASection-module___1t1MW__primary:hover {
+  box-shadow: var(--shadow-glow-strong);
+  transform: translateY(-2px);
+}
+
+.CTASection-module___1t1MW__secondary {
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  background: none;
+}
+
+.CTASection-module___1t1MW__secondary:hover {
+  border-color: var(--color-primary);
+  background: #0066ff1a;
+}
+
+.CTASection-module___1t1MW__ghost {
+  color: var(--color-primary-light);
+  background: none;
+}
+
+.CTASection-module___1t1MW__ghost:hover {
+  background: #0066ff1a;
+}
+
+@media (max-width: 640px) {
+  .CTASection-module___1t1MW__section {
+    padding: 64px 0;
+  }
+
+  .CTASection-module___1t1MW__title {
+    font-size: 2rem;
+  }
+
+  .CTASection-module___1t1MW__buttons {
+    flex-direction: column;
+  }
+
+  .CTASection-module___1t1MW__button {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=src_components_blocks_CTASection_CTASection_module_css_bad6b30c._.single.css.map*/

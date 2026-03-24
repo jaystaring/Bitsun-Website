@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 58, "column": 0}, "map": {"version":3,"sources":["file:///Users/jaysmacbookair/Desktop/02%20AI%20/01%20Project/13%20%E6%AF%94%E5%8D%87%E6%96%B0%E5%AE%98%E7%BD%91/bisheng-website/src/app/api/pages/about/route.ts"],"sourcesContent":["import { NextResponse } from 'next/server';\nimport fs from 'fs';\nimport path from 'path';\n\nexport async function GET() {\n  try {\n    const filePath = path.join(process.cwd(), 'content/i18n/zh-CN/pages/about.json');\n    const content = fs.readFileSync(filePath, 'utf-8');\n    const data = JSON.parse(content);\n    return NextResponse.json(data);\n  } catch (error) {\n    console.error('读取关于页面数据失败:', error);\n    return NextResponse.json({ error: '读取数据失败' }, { status: 500 });\n  }\n}\n"],"names":[],"mappings":";;;;AAAA;AACA;AACA;;;;AAEO,eAAe;IACpB,IAAI;QACF,MAAM,WAAW,4GAAI,CAAC,IAAI,CAAC,QAAQ,GAAG,IAAI;QAC1C,MAAM,UAAU,wGAAE,CAAC,YAAY,CAAC,UAAU;QAC1C,MAAM,OAAO,KAAK,KAAK,CAAC;QACxB,OAAO,gJAAY,CAAC,IAAI,CAAC;IAC3B,EAAE,OAAO,OAAO;QACd,QAAQ,KAAK,CAAC,eAAe;QAC7B,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,OAAO;QAAS,GAAG;YAAE,QAAQ;QAAI;IAC9D;AACF"}}]
+}

@@ -1,0 +1,622 @@
+/* [project]/src/app/about/page.module.css [app-client] (css) */
+.page-module__NfDiEG__page {
+  min-height: 100vh;
+}
+
+.page-module__NfDiEG__hero {
+  padding: 140px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-module__NfDiEG__heroBackground {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.page-module__NfDiEG__heroGlow {
+  filter: blur(80px);
+  background: radial-gradient(#00f5ff26 0%, #0000 70%);
+  width: 1000px;
+  height: 500px;
+  animation: 8s ease-in-out infinite page-module__NfDiEG__pulseGlow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-module__NfDiEG__heroParticles {
+  background-image: radial-gradient(2px 2px at 20px 30px, #00f5ff4d, #0000), radial-gradient(2px 2px at 40px 70px, #8b5cf64d, #0000), radial-gradient(2px 2px at 50px 160px, #00f5ff4d, #0000), radial-gradient(2px 2px at 90px 40px, #8b5cf64d, #0000), radial-gradient(2px 2px at 130px 80px, #00f5ff4d, #0000);
+  background-size: 200px 200px;
+  animation: 20s linear infinite page-module__NfDiEG__particleFloat;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes page-module__NfDiEG__pulseGlow {
+  0%, 100% {
+    opacity: .6;
+    transform: translate(-50%, -50%)scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1.1);
+  }
+}
+
+@keyframes page-module__NfDiEG__particleFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.page-module__NfDiEG__container {
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+.page-module__NfDiEG__heroContent {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-module__NfDiEG__heroTag {
+  color: var(--color-electric-cyan);
+  border-radius: var(--radius-full);
+  background: #00f5ff1a;
+  border: 1px solid #00f5ff4d;
+  margin-bottom: 24px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.page-module__NfDiEG__heroTitle {
+  background: linear-gradient(135deg, #fff 0%, var(--color-electric-cyan) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.page-module__NfDiEG__heroSubtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.6;
+}
+
+.page-module__NfDiEG__corePhilosophy {
+  border-radius: var(--radius-lg);
+  background: #ffffff08;
+  border: 1px solid #ffffff1a;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 32px;
+  display: inline-flex;
+}
+
+.page-module__NfDiEG__philosophyText {
+  color: var(--color-electric-cyan);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.page-module__NfDiEG__introduction {
+  background: #0003;
+  padding: 100px 0;
+}
+
+.page-module__NfDiEG__sectionTitle {
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+}
+
+.page-module__NfDiEG__valuesGrid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 60px;
+  display: grid;
+}
+
+.page-module__NfDiEG__valueCard {
+  border-radius: var(--radius-xl);
+  background: #ffffff05;
+  border: 1px solid #ffffff0d;
+  padding: 40px 32px;
+  transition: all .3s;
+}
+
+.page-module__NfDiEG__valueCard:hover {
+  background: #ffffff0a;
+  border-color: #00f5ff33;
+  transform: translateY(-4px);
+}
+
+.page-module__NfDiEG__valueIcon {
+  border-radius: var(--radius-lg);
+  width: 56px;
+  height: 56px;
+  color: var(--color-electric-cyan);
+  background: #00f5ff1a;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.page-module__NfDiEG__valueIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page-module__NfDiEG__valueTitle {
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.page-module__NfDiEG__valueDesc {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page-module__NfDiEG__achievementsGrid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+  display: grid;
+}
+
+.page-module__NfDiEG__achievementCard {
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #00f5ff14 0%, #8b5cf614 100%);
+  border: 1px solid #00f5ff26;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  display: flex;
+}
+
+.page-module__NfDiEG__achievementValue {
+  background: linear-gradient(135deg, var(--color-electric-cyan) 0%, #8b5cf6 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 8px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.page-module__NfDiEG__achievementLabel {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.page-module__NfDiEG__industriesText {
+  max-width: 900px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.page-module__NfDiEG__leader {
+  padding: 100px 0;
+}
+
+.page-module__NfDiEG__leaderContent {
+  grid-template-columns: 320px 1fr;
+  align-items: start;
+  gap: 60px;
+  display: grid;
+}
+
+.page-module__NfDiEG__leaderImageWrapper {
+  position: relative;
+}
+
+.page-module__NfDiEG__leaderImage {
+  border-radius: var(--radius-xl);
+  width: 100%;
+  box-shadow: 0 20px 60px #0000004d;
+}
+
+.page-module__NfDiEG__leaderImageGlow {
+  filter: blur(30px);
+  z-index: -1;
+  background: radial-gradient(#00f5ff33 0%, #0000 70%);
+  position: absolute;
+  inset: -20px;
+}
+
+.page-module__NfDiEG__leaderInfo {
+  padding-top: 20px;
+}
+
+.page-module__NfDiEG__leaderHeader {
+  margin-bottom: 20px;
+}
+
+.page-module__NfDiEG__leaderName {
+  color: var(--color-text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  display: inline;
+}
+
+.page-module__NfDiEG__leaderAlias {
+  color: var(--color-text-secondary);
+  margin: 0 12px;
+  font-size: 1.25rem;
+}
+
+.page-module__NfDiEG__leaderPosition {
+  color: var(--color-electric-cyan);
+  border-radius: var(--radius-full);
+  background: #00f5ff1a;
+  margin-left: 8px;
+  padding: 6px 16px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.page-module__NfDiEG__leaderIntro {
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.page-module__NfDiEG__credentialsList {
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.page-module__NfDiEG__credentialItem {
+  color: var(--color-text-secondary);
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  display: flex;
+}
+
+.page-module__NfDiEG__credentialItem svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-electric-cyan);
+  flex-shrink: 0;
+}
+
+.page-module__NfDiEG__booksSection {
+  border-radius: var(--radius-lg);
+  background: #ffffff05;
+  border: 1px solid #ffffff0d;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 24px;
+  display: flex;
+}
+
+.page-module__NfDiEG__bookImage {
+  border-radius: var(--radius-md);
+  width: 100px;
+  height: auto;
+  box-shadow: 0 4px 12px #0003;
+}
+
+.page-module__NfDiEG__booksInfo {
+  flex: 1;
+}
+
+.page-module__NfDiEG__booksTitle {
+  color: var(--color-electric-cyan);
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.page-module__NfDiEG__bookTitles {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.page-module__NfDiEG__bookTitle {
+  color: var(--color-text-primary);
+  border-radius: var(--radius-sm);
+  background: #ffffff0d;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+
+.page-module__NfDiEG__bookAchievement {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.page-module__NfDiEG__leaderExperience {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.page-module__NfDiEG__milestones {
+  background: #0003;
+  padding: 100px 0;
+}
+
+.page-module__NfDiEG__timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-module__NfDiEG__timelineLine {
+  background: linear-gradient(180deg, var(--color-electric-cyan) 0%, #00f5ff33 100%);
+  width: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page-module__NfDiEG__timelineItem {
+  gap: 40px;
+  padding: 32px 0 32px 40px;
+  display: flex;
+  position: relative;
+}
+
+.page-module__NfDiEG__timelineDot {
+  background: var(--color-electric-cyan);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 40px;
+  left: -5px;
+  box-shadow: 0 0 20px #00f5ff80;
+}
+
+.page-module__NfDiEG__timelineYear {
+  width: 120px;
+  color: var(--color-electric-cyan);
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.page-module__NfDiEG__timelineContent {
+  flex: 1;
+}
+
+.page-module__NfDiEG__timelinePhase {
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.page-module__NfDiEG__timelineDesc {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page-module__NfDiEG__advantages {
+  padding: 100px 0;
+}
+
+.page-module__NfDiEG__advantagesGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  display: grid;
+}
+
+.page-module__NfDiEG__advantageCard {
+  border-radius: var(--radius-xl);
+  background: #ffffff05;
+  border: 1px solid #ffffff0d;
+  padding: 40px;
+  transition: all .3s;
+}
+
+.page-module__NfDiEG__advantageCard:hover {
+  background: #ffffff0a;
+  border-color: #00f5ff33;
+  transform: translateY(-4px);
+}
+
+.page-module__NfDiEG__advantageIcon {
+  border-radius: var(--radius-lg);
+  width: 64px;
+  height: 64px;
+  color: var(--color-electric-cyan);
+  background: linear-gradient(135deg, #00f5ff1a 0%, #8b5cf61a 100%);
+  margin-bottom: 24px;
+  padding: 14px;
+}
+
+.page-module__NfDiEG__advantageIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page-module__NfDiEG__advantageTitle {
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.page-module__NfDiEG__advantageDesc {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.page-module__NfDiEG__cta {
+  text-align: center;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-module__NfDiEG__ctaBackground {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.page-module__NfDiEG__ctaGlow {
+  filter: blur(60px);
+  background: radial-gradient(#00f5ff1f 0%, #0000 70%);
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-module__NfDiEG__ctaTitle {
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+}
+
+.page-module__NfDiEG__ctaDescription {
+  color: var(--color-text-secondary);
+  margin-bottom: 40px;
+  font-size: 1.125rem;
+}
+
+.page-module__NfDiEG__ctaButton {
+  color: var(--color-dark);
+  background: var(--gradient-electric);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  border: none;
+  padding: 18px 56px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.page-module__NfDiEG__ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px #00f5ff66;
+}
+
+.page-module__NfDiEG__loading {
+  background: var(--color-dark);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+.page-module__NfDiEG__loadingSpinner {
+  border: 3px solid #00f5ff1a;
+  border-top-color: var(--color-electric-cyan);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: 1s linear infinite page-module__NfDiEG__spin;
+}
+
+@keyframes page-module__NfDiEG__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-module__NfDiEG__valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-module__NfDiEG__achievementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-module__NfDiEG__leaderContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .page-module__NfDiEG__leaderImageWrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .page-module__NfDiEG__advantagesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-module__NfDiEG__hero {
+    padding: 100px 0 60px;
+  }
+
+  .page-module__NfDiEG__corePhilosophy {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 20px;
+  }
+
+  .page-module__NfDiEG__achievementsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-module__NfDiEG__achievementValue {
+    font-size: 2rem;
+  }
+
+  .page-module__NfDiEG__timelineItem {
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 32px;
+  }
+
+  .page-module__NfDiEG__timelineYear {
+    width: auto;
+  }
+
+  .page-module__NfDiEG__booksSection {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-module__NfDiEG__bookImage {
+    width: 80px;
+  }
+}
+
+/*# sourceMappingURL=src_app_about_page_module_31c00df2.css.map*/

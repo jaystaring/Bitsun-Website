@@ -1,0 +1,46 @@
+/* [project]/src/components/admin/AdminLayout.module.css [app-client] (css) */
+.AdminLayout-module__YwwWgW__container {
+  background: var(--color-bg-primary);
+  min-height: 100vh;
+  display: flex;
+}
+
+.AdminLayout-module__YwwWgW__loading {
+  min-height: 100vh;
+  color: var(--color-text-secondary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.AdminLayout-module__YwwWgW__spinner {
+  border: 3px solid #ffffff1a;
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: 1s linear infinite AdminLayout-module__YwwWgW__spin;
+}
+
+@keyframes AdminLayout-module__YwwWgW__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AdminLayout-module__YwwWgW__main {
+  flex-direction: column;
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+}
+
+.AdminLayout-module__YwwWgW__content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/*# sourceMappingURL=src_components_admin_AdminLayout_module_css_bad6b30c._.single.css.map*/

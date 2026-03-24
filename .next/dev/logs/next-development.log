@@ -1,0 +1,767 @@
+[00:00:01.004] Server  LOG     ✓ Ready in 833ms
+[00:00:12.839] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:40.784] Server  WARN    ⚠ Cross origin request detected from 172.20.10.2 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:02:40.796] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:50.399] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:06:53.409] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:56.249] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:09:01.499] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="zh-CN"
+-                         style={{-webkit-touch-callout:"none"}}
+                        >
+                          <head>
+                          ...
+                            ...
+                              <LinkComponent href="/" className="Header-mod...">
+                                <a className="Header-mod..." ref={function} onClick={function onClick} ...>
+                                  <img
+                                    src="/images/logo-light.png"
+                                    alt="比升技术"
+                                    className="Header-module__85i50G__logoImage"
+-                                   style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                  >
+                            ...
+                              <Home>
+                                ...
+                                  <div className="HeroSectio...">
+                                    <img
+                                      alt="Hero Background"
+                                      fetchPriority={undefined}
+                                      loading={undefined}
+                                      width={undefined}
+                                      height={undefined}
+                                      decoding="async"
+                                      data-nimg="fill"
+                                      className="HeroSection-module__M2gKLW__bgImage"
+                                      style={{
++                                       position: "absolute"
+-                                       position: "absolute"
++                                       height: "100%"
+-                                       height: "100%"
++                                       width: "100%"
+-                                       width: "100%"
++                                       left: 0
+-                                       left: "0px"
++                                       top: 0
+-                                       top: "0px"
++                                       right: 0
+-                                       right: "0px"
++                                       bottom: 0
+-                                       bottom: "0px"
++                                       objectFit: undefined
++                                       objectPosition: undefined
++                                       color: "transparent"
+-                                       color: "transparent"
+-                                       -webkit-touch-callout: "none"
+-                                       -webkit-user-select: "none"
+                                      }}
+                                      sizes={undefined}
+                                      srcSet={undefined}
+                                      src="/images/hero-bg.jpg"
+                                      ref={function}
+                                      onLoad={function onLoad}
+                                      onError={function onError}
+                                    >
+                                    ...
+                                    ...
+                                <section>
+                                ...
+                                  <div className="page-modul...">
+                                    ...
+                                      <div className="page-modul...">
+                                        <img
+                                          alt="大美丽"
+                                          fetchPriority={undefined}
+                                          loading="lazy"
+                                          width={undefined}
+                                          height={undefined}
+                                          decoding="async"
+                                          data-nimg="fill"
+                                          className="page-module___8aEwW__industryImg"
+                                          style={{
++                                           position: "absolute"
+-                                           position: "absolute"
++                                           height: "100%"
+-                                           height: "100%"
++                                           width: "100%"
+-                                           width: "100%"
++                                           left: 0
+-                                           left: "0px"
++                                           top: 0
+-                                           top: "0px"
++                                           right: 0
+-                                           right: "0px"
++                                           bottom: 0
+-                                           bottom: "0px"
++                                           objectFit: undefined
++                                           objectPosition: undefined
++                                           color: "transparent"
+-                                           color: "transparent"
+-                                           -webkit-touch-callout: "none"
+-                                           -webkit-user-select: "none"
+                                          }}
+                                          sizes={undefined}
+                                          srcSet={undefined}
+                                          src="/images/industries/industry-beauty.svg"
+                                          ref={function}
+                                          onLoad={function onLoad}
+                                          onError={function onError}
+                                        >
+                                        ...
+                                    ...
+                                      <div className="page-modul...">
+                                        <img
+                                          alt="大健康"
+                                          fetchPriority={undefined}
+                                          loading="lazy"
+                                          width={undefined}
+                                          height={undefined}
+                                          decoding="async"
+                                          data-nimg="fill"
+                                          className="page-module___8aEwW__industryImg"
+                                          style={{
++                                           position: "absolute"
+-                                           position: "absolute"
++                                           height: "100%"
+-                                           height: "100%"
++                                           width: "100%"
+-                                           width: "100%"
++                                           left: 0
+-                                           left: "0px"
++                                           top: 0
+-                                           top: "0px"
++                                           right: 0
+-                                           right: "0px"
++                                           bottom: 0
+-                                           bottom: "0px"
++                                           objectFit: undefined
++                                           objectPosition: undefined
++                                           color: "transparent"
+-                                           color: "transparent"
+-                                           -webkit-touch-callout: "none"
+-                                           -webkit-user-select: "none"
+                                          }}
+                                          sizes={undefined}
+                                          srcSet={undefined}
+                                          src="/images/industries/industry-health.svg"
+                                          ref={function}
+                                          onLoad={function onLoad}
+                                          onError={function onError}
+                                        >
+                                        ...
+                                    ...
+                                      <div className="page-modul...">
+                                        <img
+                                          alt="大生活"
+                                          fetchPriority={undefined}
+                                          loading="lazy"
+                                          width={undefined}
+                                          height={undefined}
+                                          decoding="async"
+                                          data-nimg="fill"
+                                          className="page-module___8aEwW__industryImg"
+                                          style={{
++                                           position: "absolute"
+-                                           position: "absolute"
++                                           height: "100%"
+-                                           height: "100%"
++                                           width: "100%"
+-                                           width: "100%"
++                                           left: 0
+-                                           left: "0px"
++                                           top: 0
+-                                           top: "0px"
++                                           right: 0
+-                                           right: "0px"
++                                           bottom: 0
+-                                           bottom: "0px"
++                                           objectFit: undefined
++                                           objectPosition: undefined
++                                           color: "transparent"
+-                                           color: "transparent"
+-                                           -webkit-touch-callout: "none"
+-                                           -webkit-user-select: "none"
+                                          }}
+                                          sizes={undefined}
+                                          srcSet={undefined}
+                                          src="/images/industries/industry-life.svg"
+                                          ref={function}
+                                          onLoad={function onLoad}
+                                          onError={function onError}
+                                        >
+                                        ...
+                                <Home>
+                                  <section className="page-modul...">
+                                    <div className="page-modul...">
+                                      <div>
+                                      <div className="page-modul...">
+                                        <div>
+                                        <div className="page-modul...">
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星澜全渠道业务中台"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-oms-hero.jpg"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星澜分销管理系统"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-distribution.svg"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星澜电商管理系统"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-ecommerce-hero.jpg"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星澜门店管理系统"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-pos-hero.jpg"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星澜智能商品运营"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-ai-hero.jpg"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                      <div className="page-modul...">
+                                        <div>
+                                        <div className="page-modul...">
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星智AI智能底座"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-ai-platform.png"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                          ...
+                                            <div className="page-modul...">
+                                              <img
+                                                alt="星智企业场景能力智能体"
+                                                fetchPriority={undefined}
+                                                loading="lazy"
+                                                width={undefined}
+                                                height={undefined}
+                                                decoding="async"
+                                                data-nimg="fill"
+                                                className="page-module___8aEwW__productImg"
+                                                style={{
++                                                 position: "absolute"
+-                                                 position: "absolute"
++                                                 height: "100%"
+-                                                 height: "100%"
++                                                 width: "100%"
+-                                                 width: "100%"
++                                                 left: 0
+-                                                 left: "0px"
++                                                 top: 0
+-                                                 top: "0px"
++                                                 right: 0
+-                                                 right: "0px"
++                                                 bottom: 0
+-                                                 bottom: "0px"
++                                                 objectFit: undefined
++                                                 objectPosition: undefined
++                                                 color: "transparent"
+-                                                 color: "transparent"
+-                                                 -webkit-touch-callout: "none"
+-                                                 -webkit-user-select: "none"
+                                                }}
+                                                sizes={undefined}
+                                                srcSet={undefined}
+                                                src="/images/products/product-ai-agent.png"
+                                                ref={function}
+                                                onLoad={function onLoad}
+                                                onError={function onError}
+                                              >
+                                ...
+                                  <div className="page-modul...">
+                                    <div className="page-modul...">
+                                      <h3>
+                                      <div className="page-modul...">
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/beauty/UR.png"
+                                            alt="UR"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/beauty/中免.png"
+                                            alt="中免"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/beauty/安踏.png"
+                                            alt="安踏"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/beauty/斐乐.png"
+                                            alt="斐乐"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/beauty/森马.png"
+                                            alt="森马"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/beauty/特步.png"
+                                            alt="特步"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                    <div className="page-modul...">
+                                      <h3>
+                                      <div className="page-modul...">
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/health/国药.png"
+                                            alt="国药"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/health/广药.png"
+                                            alt="广药"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/health/恒昌医药.png"
+                                            alt="恒昌医药"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/health/来伊份.png"
+                                            alt="来伊份"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/health/英氏.png"
+                                            alt="英氏"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                    <div className="page-modul...">
+                                      <h3>
+                                      <div className="page-modul...">
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/life/九阳.png"
+                                            alt="九阳"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/life/立白.png"
+                                            alt="立白"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/life/影子科技.png"
+                                            alt="影子科技"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                        <div className="page-modul...">
+                                          <img
+                                            src="/images/clients/life/扬翔股份.png"
+                                            alt="扬翔股份"
+                                            className="page-module___8aEwW__logoImage"
+-                                           style={{-webkit-touch-callout:"none",-webkit-user-select:"none"}}
+                                          >
+                                <section>
+                                ...
+                                  <div className="CTASection...">
+                                    <img
+                                      alt="CTA Background"
+                                      fetchPriority={undefined}
+                                      loading="lazy"
+                                      width={undefined}
+                                      height={undefined}
+                                      decoding="async"
+                                      data-nimg="fill"
+                                      className="CTASection-module___1t1MW__bgImage"
+                                      style={{
++                                       position: "absolute"
+-                                       position: "absolute"
++                                       height: "100%"
+-                                       height: "100%"
++                                       width: "100%"
+-                                       width: "100%"
++                                       left: 0
+-                                       left: "0px"
++                                       top: 0
+-                                       top: "0px"
++                                       right: 0
+-                                       right: "0px"
++                                       bottom: 0
+-                                       bottom: "0px"
++                                       objectFit: undefined
++                                       objectPosition: undefined
++                                       color: "transparent"
+-                                       color: "transparent"
+-                                       -webkit-touch-callout: "none"
+-                                       -webkit-user-select: "none"
+                                      }}
+                                      sizes={undefined}
+                                      srcSet={undefined}
+                                      src="/images/cta/cta-bg.jpg"
+                                      ref={function}
+                                      onLoad={function onLoad}
+                                      onError={function onError}
+                                    >
+                                    ...
+                            ...
+                  ...
+
+[00:10:19.416] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:20.275] Browser LOG     module device.network not found
+[00:11:20.275] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="zh-CN"
+-                         style={{-webkit-touch-callout:"none"}}
+                        >
+                          <head>
+                            <link>
+                            <link>
+                            <link>
+                            <link>
+                            <meta>
+                            <script
++                             type="application/ld+json"
+-                             type={null}
+                              dangerouslySetInnerHTML={{
++                               __html: "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"比升..."
+-                               __html: "var dd_gray_fix_blank_check = true;\n!(function () {\n  var require, define;\..."
+                              }}
+                            >
+                          ...
+                  ...
+
+[00:13:04.347] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:04.347] Browser LOG     checkStatus, remote debug not started

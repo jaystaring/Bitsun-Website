@@ -1,0 +1,91 @@
+/* [project]/src/components/auth/LoginForm.module.css [app-client] (css) */
+.LoginForm-module__es-cSa__form {
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+}
+
+.LoginForm-module__es-cSa__error {
+  color: #fca5a5;
+  background: #ef44441a;
+  border: 1px solid #ef44444d;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+}
+
+.LoginForm-module__es-cSa__field {
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+}
+
+.LoginForm-module__es-cSa__label {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.LoginForm-module__es-cSa__input {
+  color: var(--color-text-primary);
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all .2s;
+}
+
+.LoginForm-module__es-cSa__input:focus {
+  border-color: var(--color-primary);
+  background: #ffffff14;
+  outline: none;
+}
+
+.LoginForm-module__es-cSa__input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.LoginForm-module__es-cSa__remember {
+  align-items: center;
+  display: flex;
+}
+
+.LoginForm-module__es-cSa__checkbox {
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  display: flex;
+}
+
+.LoginForm-module__es-cSa__checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+.LoginForm-module__es-cSa__button {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #06f 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .2s;
+}
+
+.LoginForm-module__es-cSa__button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px #06f6;
+}
+
+.LoginForm-module__es-cSa__button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=src_components_auth_LoginForm_module_css_bad6b30c._.single.css.map*/

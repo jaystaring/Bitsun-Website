@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[94765,["/_next/static/chunks/367e2fa32155f472.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/2446a98b50024c9f.js"],"default"]
+3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/efcfe394ed2458b4.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+:HL["/_next/static/chunks/24f5c49c066ff7b1.css","style"]
+0:{"buildId":"bqkpKlwNHBpnfWfJn6yog","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"page-module__aydn6q__container","children":[["$","div",null,{"className":"page-module__aydn6q__background","children":["$","div",null,{"className":"page-module__aydn6q__gradient"}]}],["$","div",null,{"className":"page-module__aydn6q__loginCard","children":[["$","div",null,{"className":"page-module__aydn6q__logo","children":["$","span",null,{"className":"page-module__aydn6q__logoText","children":"比升技术"}]}],["$","h1",null,{"className":"page-module__aydn6q__title","children":"比升演示管理后台"}],["$","p",null,{"className":"page-module__aydn6q__subtitle","children":"内部管理系统"}],["$","$L2",null,{}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/24f5c49c066ff7b1.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2446a98b50024c9f.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

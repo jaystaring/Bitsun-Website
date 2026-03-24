@@ -1,0 +1,186 @@
+/* [project]/src/components/blocks/CapabilityGrid/CapabilityGrid.module.css [app-client] (css) */
+.CapabilityGrid-module__Oo8Dqq__section {
+  background: var(--color-bg-primary);
+  padding: 96px 0;
+}
+
+.CapabilityGrid-module__Oo8Dqq__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.CapabilityGrid-module__Oo8Dqq__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.CapabilityGrid-module__Oo8Dqq__title {
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.CapabilityGrid-module__Oo8Dqq__subtitle {
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.CapabilityGrid-module__Oo8Dqq__grid {
+  gap: 24px;
+  display: grid;
+}
+
+.CapabilityGrid-module__Oo8Dqq__grid[data-columns="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.CapabilityGrid-module__Oo8Dqq__grid[data-columns="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.CapabilityGrid-module__Oo8Dqq__grid[data-columns="4"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.CapabilityGrid-module__Oo8Dqq__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  transition: all var(--duration-normal);
+  flex-direction: column;
+  padding: 32px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.CapabilityGrid-module__Oo8Dqq__card:before {
+  content: "";
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity var(--duration-normal);
+  position: absolute;
+  inset: 0;
+}
+
+.CapabilityGrid-module__Oo8Dqq__card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.CapabilityGrid-module__Oo8Dqq__card:hover:before {
+  opacity: 1;
+}
+
+.CapabilityGrid-module__Oo8Dqq__iconWrapper {
+  z-index: 1;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.CapabilityGrid-module__Oo8Dqq__icon {
+  border-radius: var(--radius-lg);
+  background: none;
+  border: 1px solid #00f5ff33;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  box-shadow: inset 0 0 20px #00f5ff26;
+}
+
+.CapabilityGrid-module__Oo8Dqq__icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-electric-cyan);
+}
+
+.CapabilityGrid-module__Oo8Dqq__iconImage {
+  object-fit: contain;
+  filter: brightness(0) invert();
+  width: 32px;
+  height: 32px;
+}
+
+.CapabilityGrid-module__Oo8Dqq__cardTitle {
+  z-index: 1;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.CapabilityGrid-module__Oo8Dqq__cardDescription {
+  z-index: 1;
+  color: var(--color-text-secondary);
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.CapabilityGrid-module__Oo8Dqq__metric {
+  z-index: 1;
+  border-top: 1px solid #ffffff0d;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  display: flex;
+  position: relative;
+}
+
+.CapabilityGrid-module__Oo8Dqq__metricValue {
+  color: var(--color-electric-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.CapabilityGrid-module__Oo8Dqq__metricLabel {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.CapabilityGrid-module__Oo8Dqq__arrow {
+  z-index: 1;
+  color: var(--color-primary);
+  opacity: 0;
+  transition: all var(--duration-fast);
+  margin-top: 24px;
+  position: relative;
+  transform: translateX(-8px);
+}
+
+.CapabilityGrid-module__Oo8Dqq__card:hover .CapabilityGrid-module__Oo8Dqq__arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+  .CapabilityGrid-module__Oo8Dqq__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .CapabilityGrid-module__Oo8Dqq__section {
+    padding: 64px 0;
+  }
+
+  .CapabilityGrid-module__Oo8Dqq__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .CapabilityGrid-module__Oo8Dqq__title {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_blocks_CapabilityGrid_CapabilityGrid_module_css_bad6b30c._.single.css.map*/

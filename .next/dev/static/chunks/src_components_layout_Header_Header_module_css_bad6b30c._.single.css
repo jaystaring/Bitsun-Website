@@ -1,0 +1,283 @@
+/* [project]/src/components/layout/Header/Header.module.css [app-client] (css) */
+.Header-module__85i50G__header {
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border-light);
+  background: #0a0f1ce6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Header-module__85i50G__container {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  height: 72px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+}
+
+.Header-module__85i50G__logo {
+  color: var(--color-text-primary);
+  transition: opacity var(--duration-fast);
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+}
+
+.Header-module__85i50G__logo:hover {
+  opacity: .8;
+}
+
+.Header-module__85i50G__logoImage {
+  object-fit: contain;
+  width: 77px;
+  height: 40px;
+  display: block;
+}
+
+.Header-module__85i50G__nav {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.Header-module__85i50G__navItem {
+  position: relative;
+}
+
+.Header-module__85i50G__navLink {
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast);
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+}
+
+.Header-module__85i50G__navLink:hover {
+  color: var(--color-text-primary);
+  background: #ffffff0d;
+}
+
+.Header-module__85i50G__dropdown {
+  position: relative;
+}
+
+.Header-module__85i50G__dropdownArrow {
+  transition: transform var(--duration-fast);
+}
+
+.Header-module__85i50G__dropdown:hover .Header-module__85i50G__dropdownArrow {
+  transform: rotate(180deg);
+}
+
+.Header-module__85i50G__dropdownMenu {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  visibility: hidden;
+  min-width: 220px;
+  transition: all var(--duration-fast);
+  padding: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(10px);
+  box-shadow: 0 10px 40px #0000004d;
+}
+
+.Header-module__85i50G__dropdown:hover .Header-module__85i50G__dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.Header-module__85i50G__dropdownGroupTitle {
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.Header-module__85i50G__dropdownLink {
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 14px;
+  display: flex;
+}
+
+.Header-module__85i50G__dropdownLink:hover {
+  color: var(--color-text-primary);
+  background: #0066ff1a;
+}
+
+.Header-module__85i50G__tag {
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.Header-module__85i50G__tag-primary {
+  color: var(--color-primary-light);
+  background: #06f3;
+}
+
+.Header-module__85i50G__tag-accent {
+  color: var(--color-accent);
+  background: #10b98133;
+}
+
+.Header-module__85i50G__tag-secondary {
+  color: var(--color-secondary);
+  background: #00c2ff33;
+}
+
+.Header-module__85i50G__cta {
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.Header-module__85i50G__loginLink {
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast);
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Header-module__85i50G__loginLink:hover {
+  color: var(--color-text-primary);
+}
+
+.Header-module__85i50G__ctaButton {
+  color: #fff;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.Header-module__85i50G__ctaButton:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-1px);
+}
+
+.Header-module__85i50G__mobileMenuButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+.Header-module__85i50G__hamburger {
+  background: var(--color-text-primary);
+  width: 24px;
+  height: 2px;
+  transition: all var(--duration-fast);
+  position: relative;
+}
+
+.Header-module__85i50G__hamburger:before, .Header-module__85i50G__hamburger:after {
+  content: "";
+  background: var(--color-text-primary);
+  width: 24px;
+  height: 2px;
+  transition: all var(--duration-fast);
+  position: absolute;
+  left: 0;
+}
+
+.Header-module__85i50G__hamburger:before {
+  top: -8px;
+}
+
+.Header-module__85i50G__hamburger:after {
+  bottom: -8px;
+}
+
+.Header-module__85i50G__hamburgerOpen {
+  background: none;
+}
+
+.Header-module__85i50G__hamburgerOpen:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.Header-module__85i50G__hamburgerOpen:after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .Header-module__85i50G__nav {
+    background: var(--color-bg-primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--duration-normal);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 24px;
+    position: fixed;
+    inset: 72px 0 0;
+    transform: translateX(-100%);
+  }
+
+  .Header-module__85i50G__navOpen {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .Header-module__85i50G__navLink {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .Header-module__85i50G__dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    background: none;
+    border: none;
+    padding-left: 16px;
+    position: static;
+    transform: none;
+  }
+
+  .Header-module__85i50G__cta {
+    display: none;
+  }
+
+  .Header-module__85i50G__mobileMenuButton {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=src_components_layout_Header_Header_module_css_bad6b30c._.single.css.map*/
