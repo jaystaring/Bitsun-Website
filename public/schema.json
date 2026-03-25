@@ -1,0 +1,167 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.bitsun-inc.com/#organization",
+      "name": "比升技术",
+      "alternateName": ["Bitsun", "上海比升互联网技术有限公司"],
+      "url": "https://www.bitsun-inc.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.bitsun-inc.com/images/logo-light.svg",
+        "width": 200,
+        "height": 60
+      },
+      "description": "AI时代企业数智服务商，全国领先的全渠道数智运营服务提供商",
+      "foundingDate": "2020",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CN",
+        "addressLocality": "上海市"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+86-021-52231078",
+        "contactType": "sales",
+        "availableLanguage": ["Chinese", "English"]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bitsun-inc.com/#website",
+      "url": "https://www.bitsun-inc.com",
+      "name": "比升技术官网",
+      "description": "AI时代企业数智服务商",
+      "publisher": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.bitsun-inc.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星澜全渠道业务中台",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "构建企业级商品资产中心，驱动多业态精细化运营",
+      "offers": {
+        "@type": "Offer",
+        "category": "Enterprise Software"
+      },
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/omc-oms"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星澜分销管理系统",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "全渠道分销网络数字化运营平台",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/distribution"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星澜电商管理系统",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "多平台电商统一运营管理平台",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/ecommerce"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星澜门店管理系统",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "线下门店数字化运营平台",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/pos"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星澜智能商品运营",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "AI驱动的商品运营决策平台",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/ai"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星智AI智能底座",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "企业级AI能力基础设施平台",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/ai-platform"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "星智企业场景能力智能体",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "企业复杂业务场景智能助理",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "url": "https://www.bitsun-inc.com/products/ai-agent"
+    },
+    {
+      "@type": "Service",
+      "name": "大美丽行业解决方案",
+      "description": "多品牌、多品类、多渠道运营，实现全链路数字化",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Industry",
+        "name": "Fashion & Beauty"
+      },
+      "url": "https://www.bitsun-inc.com/solutions/industry/beauty"
+    },
+    {
+      "@type": "Service",
+      "name": "大健康行业解决方案",
+      "description": "效期管理、批次追溯、全渠道一盘货运营",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Industry",
+        "name": "Healthcare & Pharma"
+      },
+      "url": "https://www.bitsun-inc.com/solutions/industry/health"
+    },
+    {
+      "@type": "Service",
+      "name": "大生活行业解决方案",
+      "description": "大件物流、售后服务、全渠道订单履约",
+      "provider": {
+        "@id": "https://www.bitsun-inc.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Industry",
+        "name": "Consumer Goods"
+      },
+      "url": "https://www.bitsun-inc.com/solutions/industry/life"
+    }
+  ]
+}

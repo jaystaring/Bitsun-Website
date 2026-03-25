@@ -2,5 +2,17 @@ User-Agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+Disallow: /login
+
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: Claude-Web
+User-Agent: Anthropic-AI
+User-Agent: Google-Extended
+User-Agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login
 
 Sitemap: https://www.bitsun-inc.com/sitemap.xml

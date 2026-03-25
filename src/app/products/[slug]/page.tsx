@@ -20,12 +20,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   if (!product) {
     return {
-      title: '产品未找到 | 比升科技',
+      title: '产品未找到 | 比升技术',
     };
   }
 
   return {
-    title: `${product.title} | 比升科技`,
+    title: `${product.title} | 比升技术`,
     description: product.subtitle || product.title,
     openGraph: {
       title: product.title,
