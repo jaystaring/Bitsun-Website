@@ -1,143 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://www.bitsun-inc.com</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/about</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/about" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/products</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/products/omc-oms</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/omc-oms" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/products/distribution</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/distribution" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/products/ecommerce</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/ecommerce" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/products/pos</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/pos" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/products/ai</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/ai" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.bitsun-inc.com/products/ai-platform</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/ai-platform" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://www.bitsun-inc.com/products/ai-agent</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/products/ai-agent" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/scenario/sales</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/scenario/sales" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/scenario/omnichannel</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/scenario/omnichannel" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/scenario/merchandise</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/scenario/merchandise" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/scenario/ecommerce</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/scenario/ecommerce" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/industry/beauty</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/industry/beauty" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/industry/health</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/industry/health" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/solutions/industry/life</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/solutions/industry/life" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://www.bitsun-inc.com/cases</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/cases" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.bitsun-inc.com/resources</loc>
-<xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.bitsun-inc.com/resources" />
-<lastmod>2026-03-25T05:59:36.846Z</lastmod>
+<lastmod>2026-03-26T08:23:55.677Z</lastmod>
 <changefreq>weekly</changefreq>
-<priority>0.6</priority>
+<priority>0.9</priority>
 </url>
 </urlset>

@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   description: '比升技术是AI时代企业数智服务商，全国领先的全渠道数智运营服务提供商。提供星澜全渠道业务中台、分销管理、电商管理、门店管理、星澜智能商品运营等产品，服务安踏、特步、森马、UR等头部品牌，助力企业实现销售最大化、成本最小化。',
   keywords: [
     '比升技术',
-    'Bitsun',
     'AI数智服务',
     '全渠道业务中台',
     'OMS订单管理',
@@ -35,12 +34,7 @@ export const metadata: Metadata = {
     '全渠道销售',
     'DTC转型',
     '企业数字化转型',
-    '消费品行业解决方案',
-    '智能补货',
-    '库存管理',
-    '订单履约',
-    'AI智能底座',
-    '企业智能体',
+    '消费品行业解决方案'
   ],
   authors: [{ name: '比升技术', url: 'https://www.bitsun-inc.com' }],
   creator: '比升技术',
@@ -87,13 +81,6 @@ export const metadata: Metadata = {
     canonical: 'https://www.bitsun-inc.com',
   },
   category: 'technology',
-  classification: 'Enterprise Software',
-  other: {
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-status-bar-style': 'black-translucent',
-    'mobile-web-app-capable': 'yes',
-    'format-detection': 'telephone=no',
-  },
 };
 
 export default function RootLayout({
@@ -107,62 +94,24 @@ export default function RootLayout({
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Organization',
-        '@id': 'https://www.bitsun-inc.com/#organization',
-        name: '比升技术',
-        alternateName: ['Bitsun', '上海比升互联网技术有限公司'],
-        url: 'https://www.bitsun-inc.com',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.bitsun-inc.com/images/logo-light.svg',
-        },
-        description: 'AI时代企业数智服务商，全国领先的全渠道数智运营服务提供商',
-        foundingDate: '2020',
-        address: {
-          '@type': 'PostalAddress',
-          addressCountry: 'CN',
-          addressLocality: '上海',
-        },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+86-021-52231078',
-          contactType: 'sales',
-          availableLanguage: ['Chinese', 'English'],
-        },
-      },
-      {
-        '@type': 'WebSite',
-        '@id': 'https://www.bitsun-inc.com/#website',
-        url: 'https://www.bitsun-inc.com',
-        name: '比升技术官网',
-        description: 'AI时代企业数智服务商',
-        publisher: {
-          '@id': 'https://www.bitsun-inc.com/#organization',
-        },
-      },
-      {
-        '@type': 'SoftwareApplication',
-        name: '星澜全渠道业务中台',
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web',
-        description: '构建企业级商品资产中心，驱动多业态精细化运营',
-        provider: {
-          '@id': 'https://www.bitsun-inc.com/#organization',
-        },
-      },
-      {
-        '@type': 'SoftwareApplication',
-        name: '星智AI智能底座',
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web',
-        description: '企业级AI能力基础设施平台',
-        provider: {
-          '@id': 'https://www.bitsun-inc.com/#organization',
-        },
-      },
-    ],
+    '@type': 'Organization',
+    name: '比升技术',
+    alternateName: 'Bitsun',
+    url: 'https://www.bitsun-inc.com',
+    logo: 'https://www.bitsun-inc.com/images/logo-light.svg',
+    description: 'AI时代企业数智服务商，全国领先的全渠道数智运营服务提供商',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'CN',
+      addressLocality: '上海',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+86-021-52231078',
+      contactType: 'sales',
+      availableLanguage: ['Chinese', 'English'],
+    },
+    sameAs: [],
   };
 
   return (

@@ -5,6 +5,8 @@ import path from 'path';
 const USERS_FILE = 'data/admin/users.json';
 const SESSIONS_FILE = 'data/admin/sessions.json';
 
+const isVercel = process.env.VERCEL === '1';
+
 export interface User {
   id: string;
   username: string;
@@ -23,6 +25,8 @@ export interface Session {
   expiresAt: string;
 }
 
+let memorySessions: Session[] = [];
+
 function hashPassword(password: string): string {
   return crypto.createHash('sha256').update(password).digest('hex');
 }
@@ -40,27 +44,35 @@ export function generateToken(): string {
   return crypto.randomBytes(32).toString('hex');
 }
 
+function getDefaultUser(): User {
+  return {
+    id: 'user-001',
+    username: 'admin',
+    password: hashPassword('Bitsun1234'),
+    name: '管理员',
+    role: 'admin',
+    status: 'active',
+    createdAt: new Date().toISOString(),
+    lastLoginAt: null,
+  };
+}
+
 export function getUsers(): User[] {
+  if (isVercel) {
+    return [getDefaultUser()];
+  }
+
   try {
     const filePath = path.join(process.cwd(), USERS_FILE);
     if (!fs.existsSync(filePath)) {
-      const defaultUsers: User[] = [{
-        id: 'user-001',
-        username: 'admin',
-        password: hashPassword('Bitsun1234'),
-        name: '管理员',
-        role: 'admin',
-        status: 'active',
-        createdAt: new Date().toISOString(),
-        lastLoginAt: null,
-      }];
+      const defaultUsers: User[] = [getDefaultUser()];
       fs.writeFileSync(filePath, JSON.stringify(defaultUsers, null, 2));
       return defaultUsers;
     }
     const content = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(content);
   } catch {
-    return [];
+    return [getDefaultUser()];
   }
 }
 
@@ -75,6 +87,10 @@ export function getUserById(id: string): User | null {
 }
 
 export function createUser(userData: Omit<User, 'id' | 'createdAt' | 'lastLoginAt'>): User {
+  if (isVercel) {
+    throw new Error('Vercel环境不支持创建用户');
+  }
+
   const users = getUsers();
   const newUser: User = {
     ...userData,
@@ -89,6 +105,10 @@ export function createUser(userData: Omit<User, 'id' | 'createdAt' | 'lastLoginA
 }
 
 export function updateUser(id: string, updates: Partial<User>): User | null {
+  if (isVercel) {
+    throw new Error('Vercel环境不支持更新用户');
+  }
+
   const users = getUsers();
   const index = users.findIndex(u => u.id === id);
   if (index === -1) return null;
@@ -99,6 +119,10 @@ export function updateUser(id: string, updates: Partial<User>): User | null {
 }
 
 export function deleteUser(id: string): boolean {
+  if (isVercel) {
+    throw new Error('Vercel环境不支持删除用户');
+  }
+
   const users = getUsers();
   const index = users.findIndex(u => u.id === id);
   if (index === -1) return false;
@@ -110,7 +134,6 @@ export function deleteUser(id: string): boolean {
 }
 
 export function createSession(userId: string, rememberMe: boolean = false): Session {
-  const sessions = getSessions();
   const token = generateToken();
   const now = new Date();
   const expiresAt = new Date(now.getTime() + (rememberMe ? 7 : 1) * 24 * 60 * 60 * 1000);
@@ -120,13 +143,25 @@ export function createSession(userId: string, rememberMe: boolean = false): Sess
     createdAt: now.toISOString(),
     expiresAt: expiresAt.toISOString(),
   };
-  sessions.push(session);
-  const filePath = path.join(process.cwd(), SESSIONS_FILE);
-  fs.writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+
+  if (isVercel) {
+    memorySessions.push(session);
+    cleanExpiredSessions();
+  } else {
+    const sessions = getSessions();
+    sessions.push(session);
+    const filePath = path.join(process.cwd(), SESSIONS_FILE);
+    fs.writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+  }
+
   return session;
 }
 
 export function getSessions(): Session[] {
+  if (isVercel) {
+    return memorySessions;
+  }
+
   try {
     const filePath = path.join(process.cwd(), SESSIONS_FILE);
     if (!fs.existsSync(filePath)) {
@@ -148,19 +183,28 @@ export function validateToken(token: string): User | null {
 }
 
 export function deleteSession(token: string): void {
-  const sessions = getSessions();
-  const index = sessions.findIndex(s => s.token === token);
-  if (index !== -1) {
-    sessions.splice(index, 1);
-    const filePath = path.join(process.cwd(), SESSIONS_FILE);
-    fs.writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+  if (isVercel) {
+    memorySessions = memorySessions.filter(s => s.token !== token);
+  } else {
+    const sessions = getSessions();
+    const index = sessions.findIndex(s => s.token === token);
+    if (index !== -1) {
+      sessions.splice(index, 1);
+      const filePath = path.join(process.cwd(), SESSIONS_FILE);
+      fs.writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+    }
   }
 }
 
 export function cleanExpiredSessions(): void {
-  const sessions = getSessions();
   const now = new Date();
-  const activeSessions = sessions.filter(s => new Date(s.expiresAt) >= now);
-  const filePath = path.join(process.cwd(), SESSIONS_FILE);
-  fs.writeFileSync(filePath, JSON.stringify(activeSessions, null, 2));
+  
+  if (isVercel) {
+    memorySessions = memorySessions.filter(s => new Date(s.expiresAt) >= now);
+  } else {
+    const sessions = getSessions();
+    const activeSessions = sessions.filter(s => new Date(s.expiresAt) >= now);
+    const filePath = path.join(process.cwd(), SESSIONS_FILE);
+    fs.writeFileSync(filePath, JSON.stringify(activeSessions, null, 2));
+  }
 }

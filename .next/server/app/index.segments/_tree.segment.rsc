@@ -16,4 +16,4 @@
 :HL["/images/clients/life/立白.png","image"]
 :HL["/images/clients/life/影子科技.png","image"]
 :HL["/images/clients/life/扬翔股份.png","image"]
-0:{"buildId":"QnPawscv8WRLiL-HVjfvK","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"ffDmAHVgfRtjdw8Zg3poB","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
