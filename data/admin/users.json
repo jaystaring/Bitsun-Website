@@ -1,0 +1,12 @@
+[
+  {
+    "id": "user-001",
+    "username": "admin",
+    "password": "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZRGdjGj/n3.iW8jY9vLB6YqL9Y9O2",
+    "name": "管理员",
+    "role": "admin",
+    "status": "active",
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "lastLoginAt": null
+  }
+]
