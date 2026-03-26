@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const USERS_FILE = 'data/admin/users.json';
-const SESSIONS_FILE = 'data/admin/sessions.json';
+const JWT_SECRET = process.env.JWT_SECRET || 'bitsun-website-secret-key-2024';
 
 const isVercel = process.env.VERCEL === '1';
 
@@ -18,14 +18,13 @@ export interface User {
   lastLoginAt: string | null;
 }
 
-export interface Session {
-  token: string;
+export interface JWTPayload {
   userId: string;
-  createdAt: string;
-  expiresAt: string;
+  username: string;
+  role: string;
+  iat: number;
+  exp: number;
 }
-
-let memorySessions: Session[] = [];
 
 function hashPassword(password: string): string {
   return crypto.createHash('sha256').update(password).digest('hex');
@@ -40,8 +39,71 @@ export function verifyPassword(password: string, hashedPassword: string): boolea
   return false;
 }
 
-export function generateToken(): string {
-  return crypto.randomBytes(32).toString('hex');
+function base64UrlEncode(str: string): string {
+  return Buffer.from(str)
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
+}
+
+function createJWT(payload: JWTPayload): string {
+  const header = {
+    alg: 'HS256',
+    typ: 'JWT',
+  };
+
+  const encodedHeader = base64UrlEncode(JSON.stringify(header));
+  const encodedPayload = base64UrlEncode(JSON.stringify(payload));
+  const signature = crypto
+    .createHmac('sha256', JWT_SECRET)
+    .update(`${encodedHeader}.${encodedPayload}`)
+    .digest('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=/g, '');
+
+  return `${encodedHeader}.${encodedPayload}.${signature}`;
+}
+
+function verifyJWT(token: string): JWTPayload | null {
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+
+    const [encodedHeader, encodedPayload, signature] = parts;
+    const expectedSignature = crypto
+      .createHmac('sha256', JWT_SECRET)
+      .update(`${encodedHeader}.${encodedPayload}`)
+      .digest('base64')
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=/g, '');
+
+    if (signature !== expectedSignature) return null;
+
+    const payload = JSON.parse(
+      Buffer.from(encodedPayload.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString()
+    );
+
+    if (payload.exp < Math.floor(Date.now() / 1000)) return null;
+
+    return payload;
+  } catch {
+    return null;
+  }
+}
+
+export function generateToken(userId: string, username: string, role: string, rememberMe: boolean = false): string {
+  const now = Math.floor(Date.now() / 1000);
+  const payload: JWTPayload = {
+    userId,
+    username,
+    role,
+    iat: now,
+    exp: now + (rememberMe ? 7 * 24 * 60 * 60 : 24 * 60 * 60),
+  };
+  return createJWT(payload);
 }
 
 function getDefaultUser(): User {
@@ -133,78 +195,21 @@ export function deleteUser(id: string): boolean {
   return true;
 }
 
-export function createSession(userId: string, rememberMe: boolean = false): Session {
-  const token = generateToken();
-  const now = new Date();
-  const expiresAt = new Date(now.getTime() + (rememberMe ? 7 : 1) * 24 * 60 * 60 * 1000);
-  const session: Session = {
-    token,
-    userId,
-    createdAt: now.toISOString(),
-    expiresAt: expiresAt.toISOString(),
-  };
-
-  if (isVercel) {
-    memorySessions.push(session);
-    cleanExpiredSessions();
-  } else {
-    const sessions = getSessions();
-    sessions.push(session);
-    const filePath = path.join(process.cwd(), SESSIONS_FILE);
-    fs.writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+export function createSession(userId: string, rememberMe: boolean = false): { token: string } {
+  const user = getUserById(userId);
+  if (!user) {
+    throw new Error('用户不存在');
   }
-
-  return session;
-}
-
-export function getSessions(): Session[] {
-  if (isVercel) {
-    return memorySessions;
-  }
-
-  try {
-    const filePath = path.join(process.cwd(), SESSIONS_FILE);
-    if (!fs.existsSync(filePath)) {
-      return [];
-    }
-    const content = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(content);
-  } catch {
-    return [];
-  }
+  const token = generateToken(userId, user.username, user.role, rememberMe);
+  return { token };
 }
 
 export function validateToken(token: string): User | null {
-  const sessions = getSessions();
-  const session = sessions.find(s => s.token === token);
-  if (!session) return null;
-  if (new Date(session.expiresAt) < new Date()) return null;
-  return getUserById(session.userId);
+  const payload = verifyJWT(token);
+  if (!payload) return null;
+  return getUserById(payload.userId);
 }
 
-export function deleteSession(token: string): void {
-  if (isVercel) {
-    memorySessions = memorySessions.filter(s => s.token !== token);
-  } else {
-    const sessions = getSessions();
-    const index = sessions.findIndex(s => s.token === token);
-    if (index !== -1) {
-      sessions.splice(index, 1);
-      const filePath = path.join(process.cwd(), SESSIONS_FILE);
-      fs.writeFileSync(filePath, JSON.stringify(sessions, null, 2));
-    }
-  }
-}
-
-export function cleanExpiredSessions(): void {
-  const now = new Date();
-  
-  if (isVercel) {
-    memorySessions = memorySessions.filter(s => new Date(s.expiresAt) >= now);
-  } else {
-    const sessions = getSessions();
-    const activeSessions = sessions.filter(s => new Date(s.expiresAt) >= now);
-    const filePath = path.join(process.cwd(), SESSIONS_FILE);
-    fs.writeFileSync(filePath, JSON.stringify(activeSessions, null, 2));
-  }
+export function deleteSession(_token: string): void {
+  // JWT token 不需要服务器端存储，此函数保留以兼容现有代码
 }

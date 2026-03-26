@@ -144,7 +144,7 @@ export default function RootLayout({
             }}
           >
             <Header navigation={navigation} site={site} />
-            <main className="pt-[72px]">
+            <main>
               {children}
             </main>
             <Footer site={site} productLinks={productLinks} />

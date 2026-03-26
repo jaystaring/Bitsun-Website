@@ -100,6 +100,8 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$2
 ;
 const USERS_FILE = 'data/admin/users.json';
 const SESSIONS_FILE = 'data/admin/sessions.json';
+const isVercel = process.env.VERCEL === '1';
+let memorySessions = [];
 function hashPassword(password) {
     return __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].createHash('sha256').update(password).digest('hex');
 }
@@ -113,21 +115,29 @@ function verifyPassword(password, hashedPassword) {
 function generateToken() {
     return __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].randomBytes(32).toString('hex');
 }
+function getDefaultUser() {
+    return {
+        id: 'user-001',
+        username: 'admin',
+        password: hashPassword('Bitsun1234'),
+        name: '管理员',
+        role: 'admin',
+        status: 'active',
+        createdAt: new Date().toISOString(),
+        lastLoginAt: null
+    };
+}
 function getUsers() {
+    if (isVercel) {
+        return [
+            getDefaultUser()
+        ];
+    }
     try {
         const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), USERS_FILE);
         if (!__TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].existsSync(filePath)) {
             const defaultUsers = [
-                {
-                    id: 'user-001',
-                    username: 'admin',
-                    password: hashPassword('Bitsun1234'),
-                    name: '管理员',
-                    role: 'admin',
-                    status: 'active',
-                    createdAt: new Date().toISOString(),
-                    lastLoginAt: null
-                }
+                getDefaultUser()
             ];
             __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(defaultUsers, null, 2));
             return defaultUsers;
@@ -135,7 +145,9 @@ function getUsers() {
         const content = __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].readFileSync(filePath, 'utf-8');
         return JSON.parse(content);
     } catch  {
-        return [];
+        return [
+            getDefaultUser()
+        ];
     }
 }
 function getUserByUsername(username) {
@@ -147,6 +159,9 @@ function getUserById(id) {
     return users.find((u)=>u.id === id) || null;
 }
 function createUser(userData) {
+    if (isVercel) {
+        throw new Error('Vercel环境不支持创建用户');
+    }
     const users = getUsers();
     const newUser = {
         ...userData,
@@ -160,6 +175,9 @@ function createUser(userData) {
     return newUser;
 }
 function updateUser(id, updates) {
+    if (isVercel) {
+        throw new Error('Vercel环境不支持更新用户');
+    }
     const users = getUsers();
     const index = users.findIndex((u)=>u.id === id);
     if (index === -1) return null;
@@ -172,6 +190,9 @@ function updateUser(id, updates) {
     return users[index];
 }
 function deleteUser(id) {
+    if (isVercel) {
+        throw new Error('Vercel环境不支持删除用户');
+    }
     const users = getUsers();
     const index = users.findIndex((u)=>u.id === id);
     if (index === -1) return false;
@@ -182,7 +203,6 @@ function deleteUser(id) {
     return true;
 }
 function createSession(userId, rememberMe = false) {
-    const sessions = getSessions();
     const token = generateToken();
     const now = new Date();
     const expiresAt = new Date(now.getTime() + (rememberMe ? 7 : 1) * 24 * 60 * 60 * 1000);
@@ -192,12 +212,21 @@ function createSession(userId, rememberMe = false) {
         createdAt: now.toISOString(),
         expiresAt: expiresAt.toISOString()
     };
-    sessions.push(session);
-    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-    __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+    if (isVercel) {
+        memorySessions.push(session);
+        cleanExpiredSessions();
+    } else {
+        const sessions = getSessions();
+        sessions.push(session);
+        const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
+        __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+    }
     return session;
 }
 function getSessions() {
+    if (isVercel) {
+        return memorySessions;
+    }
     try {
         const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
         if (!__TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].existsSync(filePath)) {
@@ -217,20 +246,28 @@ function validateToken(token) {
     return getUserById(session.userId);
 }
 function deleteSession(token) {
-    const sessions = getSessions();
-    const index = sessions.findIndex((s)=>s.token === token);
-    if (index !== -1) {
-        sessions.splice(index, 1);
-        const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-        __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+    if (isVercel) {
+        memorySessions = memorySessions.filter((s)=>s.token !== token);
+    } else {
+        const sessions = getSessions();
+        const index = sessions.findIndex((s)=>s.token === token);
+        if (index !== -1) {
+            sessions.splice(index, 1);
+            const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
+            __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(sessions, null, 2));
+        }
     }
 }
 function cleanExpiredSessions() {
-    const sessions = getSessions();
     const now = new Date();
-    const activeSessions = sessions.filter((s)=>new Date(s.expiresAt) >= now);
-    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-    __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(activeSessions, null, 2));
+    if (isVercel) {
+        memorySessions = memorySessions.filter((s)=>new Date(s.expiresAt) >= now);
+    } else {
+        const sessions = getSessions();
+        const activeSessions = sessions.filter((s)=>new Date(s.expiresAt) >= now);
+        const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
+        __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(activeSessions, null, 2));
+    }
 }
 }),
 "[project]/src/app/api/admin/demos/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {

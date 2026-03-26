@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/33e7d2529af62a7e.css","style"]
-:HL["/_next/static/chunks/fd7417a523c1554d.css","style"]
+:HL["/_next/static/chunks/609df294f158cc86.css","style"]
+:HL["/_next/static/chunks/a2b5abb23455575d.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/images/clients/beauty/UR.png","image"]
 :HL["/images/clients/beauty/中免.png","image"]
@@ -16,4 +16,4 @@
 :HL["/images/clients/life/立白.png","image"]
 :HL["/images/clients/life/影子科技.png","image"]
 :HL["/images/clients/life/扬翔股份.png","image"]
-0:{"buildId":"ffDmAHVgfRtjdw8Zg3poB","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"LfiswC3wnYoiGPNVJLlt5","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

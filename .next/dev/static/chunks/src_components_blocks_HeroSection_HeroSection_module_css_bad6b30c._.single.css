@@ -1,7 +1,8 @@
 /* [project]/src/components/blocks/HeroSection/HeroSection.module.css [app-client] (css) */
 .HeroSection-module__M2gKLW__hero {
   align-items: center;
-  min-height: calc(100vh - 72px);
+  min-height: 100vh;
+  padding-top: 72px;
   display: flex;
   position: relative;
   overflow: hidden;
