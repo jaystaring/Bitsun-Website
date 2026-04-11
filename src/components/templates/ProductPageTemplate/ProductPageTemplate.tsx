@@ -1,6 +1,10 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Product } from '@/types';
+import ContactModal from '@/components/common/ContactModal/ContactModal';
 import styles from './ProductPageTemplate.module.css';
 
 interface ProductPageTemplateProps {
@@ -496,6 +500,8 @@ const productScenarios: Record<string, Array<{ title: string; description: strin
 };
 
 export default function ProductPageTemplate({ product }: ProductPageTemplateProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   const productImages: Record<string, string> = {
     'omc-oms': '/images/products/product-oms-hero.jpg',
     'distribution': '/images/products/product-distribution.png',
@@ -550,12 +556,12 @@ export default function ProductPageTemplate({ product }: ProductPageTemplateProp
               </div>
             )}
             <div className={styles.heroCta}>
-              <Link href="/contact/demo" className={styles.primaryButton}>
+              <button onClick={() => setIsModalOpen(true)} className={styles.primaryButton}>
                 <span>预约演示</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </Link>
+              </button>
               <Link href="/cases" className={styles.secondaryButton}>
                 查看案例
               </Link>
@@ -691,18 +697,20 @@ export default function ProductPageTemplate({ product }: ProductPageTemplateProp
               : '联系我们的专家，了解如何为您的业务赋能'}
           </p>
           <div className={styles.ctaButtons}>
-            <Link href="/contact/demo" className={styles.ctaPrimary}>
+            <button onClick={() => setIsModalOpen(true)} className={styles.ctaPrimary}>
               <span>预约演示</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </Link>
+            </button>
             <Link href="/products" className={styles.ctaSecondary}>
               查看其他产品
             </Link>
           </div>
         </div>
       </section>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }

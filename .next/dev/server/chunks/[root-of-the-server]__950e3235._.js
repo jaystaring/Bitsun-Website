@@ -63,8 +63,6 @@ module.exports = mod;
 "use strict";
 
 __turbopack_context__.s([
-    "cleanExpiredSessions",
-    ()=>cleanExpiredSessions,
     "createSession",
     ()=>createSession,
     "createUser",
@@ -75,8 +73,6 @@ __turbopack_context__.s([
     ()=>deleteUser,
     "generateToken",
     ()=>generateToken,
-    "getSessions",
-    ()=>getSessions,
     "getUserById",
     ()=>getUserById,
     "getUserByUsername",
@@ -99,7 +95,8 @@ var __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$2
 ;
 ;
 const USERS_FILE = 'data/admin/users.json';
-const SESSIONS_FILE = 'data/admin/sessions.json';
+const JWT_SECRET = process.env.JWT_SECRET || 'bitsun-website-secret-key-2024';
+const isVercel = process.env.VERCEL === '1';
 function hashPassword(password) {
     return __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].createHash('sha256').update(password).digest('hex');
 }
@@ -110,24 +107,67 @@ function verifyPassword(password, hashedPassword) {
     if (password === 'Bitsun1234') return true;
     return false;
 }
-function generateToken() {
-    return __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].randomBytes(32).toString('hex');
+function base64UrlEncode(str) {
+    return Buffer.from(str).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+}
+function createJWT(payload) {
+    const header = {
+        alg: 'HS256',
+        typ: 'JWT'
+    };
+    const encodedHeader = base64UrlEncode(JSON.stringify(header));
+    const encodedPayload = base64UrlEncode(JSON.stringify(payload));
+    const signature = __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].createHmac('sha256', JWT_SECRET).update(`${encodedHeader}.${encodedPayload}`).digest('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+    return `${encodedHeader}.${encodedPayload}.${signature}`;
+}
+function verifyJWT(token) {
+    try {
+        const parts = token.split('.');
+        if (parts.length !== 3) return null;
+        const [encodedHeader, encodedPayload, signature] = parts;
+        const expectedSignature = __TURBOPACK__imported__module__$5b$externals$5d2f$crypto__$5b$external$5d$__$28$crypto$2c$__cjs$29$__["default"].createHmac('sha256', JWT_SECRET).update(`${encodedHeader}.${encodedPayload}`).digest('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+        if (signature !== expectedSignature) return null;
+        const payload = JSON.parse(Buffer.from(encodedPayload.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString());
+        if (payload.exp < Math.floor(Date.now() / 1000)) return null;
+        return payload;
+    } catch  {
+        return null;
+    }
+}
+function generateToken(userId, username, role, rememberMe = false) {
+    const now = Math.floor(Date.now() / 1000);
+    const payload = {
+        userId,
+        username,
+        role,
+        iat: now,
+        exp: now + (rememberMe ? 7 * 24 * 60 * 60 : 24 * 60 * 60)
+    };
+    return createJWT(payload);
+}
+function getDefaultUser() {
+    return {
+        id: 'user-001',
+        username: 'admin',
+        password: hashPassword('Bitsun1234'),
+        name: '管理员',
+        role: 'admin',
+        status: 'active',
+        createdAt: new Date().toISOString(),
+        lastLoginAt: null
+    };
 }
 function getUsers() {
+    if (isVercel) {
+        return [
+            getDefaultUser()
+        ];
+    }
     try {
         const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), USERS_FILE);
         if (!__TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].existsSync(filePath)) {
             const defaultUsers = [
-                {
-                    id: 'user-001',
-                    username: 'admin',
-                    password: hashPassword('Bitsun1234'),
-                    name: '管理员',
-                    role: 'admin',
-                    status: 'active',
-                    createdAt: new Date().toISOString(),
-                    lastLoginAt: null
-                }
+                getDefaultUser()
             ];
             __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(defaultUsers, null, 2));
             return defaultUsers;
@@ -135,7 +175,9 @@ function getUsers() {
         const content = __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].readFileSync(filePath, 'utf-8');
         return JSON.parse(content);
     } catch  {
-        return [];
+        return [
+            getDefaultUser()
+        ];
     }
 }
 function getUserByUsername(username) {
@@ -147,6 +189,9 @@ function getUserById(id) {
     return users.find((u)=>u.id === id) || null;
 }
 function createUser(userData) {
+    if (isVercel) {
+        throw new Error('Vercel环境不支持创建用户');
+    }
     const users = getUsers();
     const newUser = {
         ...userData,
@@ -160,6 +205,9 @@ function createUser(userData) {
     return newUser;
 }
 function updateUser(id, updates) {
+    if (isVercel) {
+        throw new Error('Vercel环境不支持更新用户');
+    }
     const users = getUsers();
     const index = users.findIndex((u)=>u.id === id);
     if (index === -1) return null;
@@ -172,6 +220,9 @@ function updateUser(id, updates) {
     return users[index];
 }
 function deleteUser(id) {
+    if (isVercel) {
+        throw new Error('Vercel环境不支持删除用户');
+    }
     const users = getUsers();
     const index = users.findIndex((u)=>u.id === id);
     if (index === -1) return false;
@@ -182,55 +233,22 @@ function deleteUser(id) {
     return true;
 }
 function createSession(userId, rememberMe = false) {
-    const sessions = getSessions();
-    const token = generateToken();
-    const now = new Date();
-    const expiresAt = new Date(now.getTime() + (rememberMe ? 7 : 1) * 24 * 60 * 60 * 1000);
-    const session = {
-        token,
-        userId,
-        createdAt: now.toISOString(),
-        expiresAt: expiresAt.toISOString()
-    };
-    sessions.push(session);
-    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-    __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(sessions, null, 2));
-    return session;
-}
-function getSessions() {
-    try {
-        const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-        if (!__TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].existsSync(filePath)) {
-            return [];
-        }
-        const content = __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].readFileSync(filePath, 'utf-8');
-        return JSON.parse(content);
-    } catch  {
-        return [];
+    const user = getUserById(userId);
+    if (!user) {
+        throw new Error('用户不存在');
     }
+    const token = generateToken(userId, user.username, user.role, rememberMe);
+    return {
+        token
+    };
 }
 function validateToken(token) {
-    const sessions = getSessions();
-    const session = sessions.find((s)=>s.token === token);
-    if (!session) return null;
-    if (new Date(session.expiresAt) < new Date()) return null;
-    return getUserById(session.userId);
+    const payload = verifyJWT(token);
+    if (!payload) return null;
+    return getUserById(payload.userId);
 }
-function deleteSession(token) {
-    const sessions = getSessions();
-    const index = sessions.findIndex((s)=>s.token === token);
-    if (index !== -1) {
-        sessions.splice(index, 1);
-        const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-        __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(sessions, null, 2));
-    }
-}
-function cleanExpiredSessions() {
-    const sessions = getSessions();
-    const now = new Date();
-    const activeSessions = sessions.filter((s)=>new Date(s.expiresAt) >= now);
-    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), SESSIONS_FILE);
-    __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, JSON.stringify(activeSessions, null, 2));
+function deleteSession(_token) {
+// JWT token 不需要服务器端存储，此函数保留以兼容现有代码
 }
 }),
 "[project]/src/app/api/admin/stats/route.ts [app-route] (ecmascript)", ((__turbopack_context__) => {
