@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react';
 import Link from 'next/link';
+import ContactModal from '@/components/common/ContactModal/ContactModal';
 import styles from './page.module.css';
 
 interface Logo {
@@ -29,6 +30,7 @@ import casesData from '../../../content/i18n/zh-CN/pages/cases/index.json';
 
 export default function CasesPage() {
   const [activeCategory, setActiveCategory] = useState('beauty');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
   const data = casesData as CasesData;
 
@@ -134,12 +136,14 @@ export default function CasesPage() {
                 className={styles.qrcode}
               />
             </div>
-            <Link href="/contact/demo" className={styles.contactBtn}>
+            <button onClick={() => setIsModalOpen(true)} className={styles.contactBtn}>
               联系我们
-            </Link>
+            </button>
           </div>
         </div>
       </section>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

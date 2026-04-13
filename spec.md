@@ -2,88 +2,66 @@
 
 ## 问题描述
 
-### 问题1：产品页面预约演示404
-**现状**：产品页面模板 (`ProductPageTemplate.tsx`) 中的"预约演示"按钮链接到 `/contact/demo` 路径，但该页面不存在，导致404错误。
+### 问题1：客户案例页面"联系我们"按钮404
+**现状**：客户案例页面 (`cases/page.tsx`) 中的"联系我们"按钮链接到 `/contact/demo` 路径，该页面不存在，导致404错误。
 
-**期望**：点击"预约演示"按钮应打开预约演示弹窗 (`ContactModal`)，而不是跳转到不存在的页面。
+**期望**：点击"联系我们"按钮应打开预约演示弹窗 (`ContactModal`)。
 
-### 问题2：顶部下拉菜单换行
-**现状**：Header 组件的下拉菜单宽度 (`min-width: 220px`) 不足，导致"企业场景能力智能体-敬请期待"文本换行，影响美观。
+### 问题2：解决方案页面"预约咨询"按钮404
+**现状**：解决方案页面 (`solutions/page.tsx`) 中的"预约咨询"按钮链接到 `/contact/demo` 路径，该页面不存在，导致404错误。
 
-**期望**：增加下拉菜单宽度，确保文本不换行。
+**期望**：点击"预约咨询"按钮应打开预约演示弹窗 (`ContactModal`)。
+
+### 问题3：全站404检测
+**现状**：需要检测所有页面和按钮，确保没有404情况。
+
+**期望**：所有页面和按钮都能正常工作，没有404错误。
 
 ---
 
 ## 修复方案
 
-### 方案1：预约演示弹窗集成
+### 方案1：客户案例页面修复
 
 #### 修改文件
-- `src/components/templates/ProductPageTemplate/ProductPageTemplate.tsx`
+- `src/app/cases/page.tsx`
 
 #### 修改内容
-1. 将组件改为客户端组件（添加 `'use client'`）
-2. 引入 `useState` 管理弹窗状态
-3. 引入 `ContactModal` 组件
-4. 将 `<Link href="/contact/demo">` 改为 `<button onClick={() => setIsModalOpen(true)}>`
-5. 添加 ContactModal 组件渲染
-
-#### 代码变更
-
-```tsx
-// 文件头部添加
-'use client';
-
-import { useState } from 'react';
-import ContactModal from '@/components/common/ContactModal/ContactModal';
-
-// 组件内部添加状态
-const [isModalOpen, setIsModalOpen] = useState(false);
-
-// Hero区域CTA按钮修改
-<button 
-  onClick={() => setIsModalOpen(true)} 
-  className={styles.primaryButton}
->
-  <span>预约演示</span>
-  <svg>...</svg>
-</button>
-
-// CTA区域按钮修改
-<button 
-  onClick={() => setIsModalOpen(true)} 
-  className={styles.ctaPrimary}
->
-  <span>预约演示</span>
-  <svg>...</svg>
-</button>
-
-// 组件末尾添加弹窗
-<ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-```
+1. 引入 `ContactModal` 组件
+2. 添加弹窗状态管理
+3. 将 `<Link href="/contact/demo">` 改为 `<button onClick={() => setIsModalOpen(true)}>`
+4. 添加 ContactModal 组件渲染
 
 ---
 
-### 方案2：下拉菜单宽度调整
+### 方案2：解决方案页面修复
 
 #### 修改文件
-- `src/components/layout/Header/Header.module.css`
+- `src/app/solutions/page.tsx`
 
 #### 修改内容
-将 `.dropdownMenu` 的 `min-width` 从 `220px` 增加到 `280px`
+1. 添加 `'use client'` 声明
+2. 引入 `useState` 和 `ContactModal` 组件
+3. 添加弹窗状态管理
+4. 将 `<Link href="/contact/demo">` 改为 `<button onClick={() => setIsModalOpen(true)}>`
+5. 添加 ContactModal 组件渲染
 
-#### 代码变更
+---
 
-```css
-.dropdownMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 280px;  /* 从 220px 增加到 280px */
-  padding: 8px;
-  /* ... 其他样式保持不变 */
-}
-```
+### 方案3：全站404检测
+
+#### 检测范围
+- 所有产品页面
+- 所有解决方案页面
+- 客户案例页面
+- 关于我们页面
+- 资源中心页面
+- 首页
+
+#### 检测内容
+- 所有 `<Link href="/contact/demo">` 链接
+- 所有 `<a href="/contact/demo">` 链接
+- 所有按钮跳转
 
 ---
 
@@ -91,15 +69,15 @@ const [isModalOpen, setIsModalOpen] = useState(false);
 
 | 文件 | 影响范围 | 风险等级 |
 |------|----------|----------|
-| ProductPageTemplate.tsx | 所有产品页面 | 低 |
-| Header.module.css | 顶部导航下拉菜单 | 低 |
+| cases/page.tsx | 客户案例页面 | 低 |
+| solutions/page.tsx | 解决方案页面 | 低 |
 
 ---
 
 ## 验证清单
 
-- [ ] 产品页面"预约演示"按钮点击后打开弹窗
-- [ ] 弹窗可以正常关闭
-- [ ] 弹窗表单可以正常提交
-- [ ] 顶部下拉菜单文本不换行
-- [ ] 其他页面预约演示功能正常
+- [ ] 客户案例页面"联系我们"按钮打开弹窗
+- [ ] 解决方案页面"预约咨询"按钮打开弹窗
+- [ ] 产品页面"预约演示"按钮正常工作
+- [ ] 首页所有按钮正常工作
+- [ ] 其他页面无404错误

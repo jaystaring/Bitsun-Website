@@ -302,3 +302,12 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   // @ts-ignore
   type __Unused = __Check
 }
+
+// Validate ../../src/app/products/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/products">> = Specific
+  const handler = {} as typeof import("../../src/app/products/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}

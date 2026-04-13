@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[87753,["/_next/static/chunks/367e2fa32155f472.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
+2:I[87753,["/_next/static/chunks/dd03b94d4f2d4082.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
 4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/efcfe394ed2458b4.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 3:Tb33,
@@ -51,5 +51,5 @@
 ## 客户共创中，敬请期待
 
 我们正在与行业头部客户深度合作，共同打造真正"能干活儿"的企业AI智能体。如果您对星智企业AI场景能力智能体感兴趣，欢迎联系我们，参与产品共创。
-0:{"buildId":"AsCYme5M-R6bpr9EMM_61","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"ai-agent","title":"星智企业场景能力智能体","subtitle":"面向企业复杂业务场景的AI Agent套件","category":"ai-product","tags":["AI","Agent","智能体","商品运营","财务对账"],"icon":"ai-agent","heroImage":"/images/products/product-ai-agent.png","highlights":[],"industries":[],"status":"coming-soon","content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"Rx-INMN_tQSPZoMEv6NB0","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"ai-agent","title":"星智企业场景能力智能体","subtitle":"面向企业复杂业务场景的AI Agent套件","category":"ai-product","tags":["AI","Agent","智能体","商品运营","财务对账"],"icon":"ai-agent","heroImage":"/images/products/product-ai-agent.png","highlights":[],"industries":[],"status":"coming-soon","content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
 6:null

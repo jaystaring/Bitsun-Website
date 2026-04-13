@@ -479,7 +479,7 @@
   border-radius: var(--radius-lg);
   opacity: 0;
   visibility: hidden;
-  min-width: 220px;
+  min-width: 280px;
   transition: all var(--duration-fast);
   padding: 8px;
   position: absolute;
@@ -1178,10 +1178,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-
-  .pt-\[72px\] {
-    padding-top: 72px;
   }
 
   .antialiased {

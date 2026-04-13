@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[87753,["/_next/static/chunks/367e2fa32155f472.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
+2:I[87753,["/_next/static/chunks/dd03b94d4f2d4082.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
 4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/efcfe394ed2458b4.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 3:Te1e,
@@ -65,5 +65,5 @@ SDD（Scenario-Driven Development）开发框架是比升独创的场景驱动�
 ## 客户共创中，敬请期待
 
 我们正在与行业头部客户深度合作，共同打造真正贴合企业业务场景的AI智能底座。如果您对星智AI智能底座感兴趣，欢迎联系我们，参与产品共创。
-0:{"buildId":"AsCYme5M-R6bpr9EMM_61","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"ai-platform","title":"星智AI智能底座","subtitle":"企业级AI基础设施平台","category":"ai-product","tags":["AI","智能底座","SDD","本体论","仿真推演"],"icon":"ai-platform","heroImage":"/images/products/product-ai-platform.png","highlights":[],"industries":[],"status":"coming-soon","content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"Rx-INMN_tQSPZoMEv6NB0","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"ai-platform","title":"星智AI智能底座","subtitle":"企业级AI基础设施平台","category":"ai-product","tags":["AI","智能底座","SDD","本体论","仿真推演"],"icon":"ai-platform","heroImage":"/images/products/product-ai-platform.png","highlights":[],"industries":[],"status":"coming-soon","content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
 6:null

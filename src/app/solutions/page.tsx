@@ -1,6 +1,8 @@
-import { promises as fs } from 'fs';
-import path from 'path';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
+import ContactModal from '@/components/common/ContactModal/ContactModal';
 import styles from './page.module.css';
 
 interface SolutionItem {
@@ -22,14 +24,11 @@ interface SolutionsData {
   };
 }
 
-async function getSolutionsData(): Promise<SolutionsData> {
-  const filePath = path.join(process.cwd(), 'content/i18n/zh-CN/pages/solutions/index.json');
-  const content = await fs.readFile(filePath, 'utf-8');
-  return JSON.parse(content);
-}
+import solutionsData from '../../../content/i18n/zh-CN/pages/solutions/index.json';
 
-export default async function SolutionsPage() {
-  const data = await getSolutionsData();
+export default function SolutionsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const data = solutionsData as SolutionsData;
 
   return (
     <div className={styles.page}>
@@ -82,14 +81,16 @@ export default async function SolutionsPage() {
           <p className={styles.ctaDescription}>
             联系我们的专家，为您定制专属解决方案
           </p>
-          <Link href="/contact/demo" className={styles.ctaButton}>
+          <button onClick={() => setIsModalOpen(true)} className={styles.ctaButton}>
             <span>预约咨询</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </Link>
+          </button>
         </div>
       </section>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

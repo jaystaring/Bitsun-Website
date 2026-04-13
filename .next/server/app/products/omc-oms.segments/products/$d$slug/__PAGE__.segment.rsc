@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[87753,["/_next/static/chunks/367e2fa32155f472.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
+2:I[87753,["/_next/static/chunks/dd03b94d4f2d4082.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
 4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/efcfe394ed2458b4.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 3:Te1d,
@@ -54,5 +54,5 @@
 - **线上线下融合**：打通O2O场景，实现全渠道销售
 - **分销与零售一体化**：支持多级分销与直营零售协同
 - **全渠道一盘货**：全局库存共享，智能调度
-0:{"buildId":"AsCYme5M-R6bpr9EMM_61","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"omc-oms","title":"星澜全渠道业务中台","subtitle":"构建企业级商品资产中心，驱动多业态精细化运营","category":"core-product","tags":["全渠道","业务中台","商品中心","库存管理","订单履约"],"icon":"omc-oms","heroImage":"/images/products/oms-hero.jpg","highlights":[{"metric":"20%","label":"库存周转提升"},{"metric":"80%","label":"订单处理效率提升"},{"metric":"50%","label":"渠道管理效率提升"}],"industries":["fashion","fmcg","home","beauty","pharma"],"content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"Rx-INMN_tQSPZoMEv6NB0","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"omc-oms","title":"星澜全渠道业务中台","subtitle":"构建企业级商品资产中心，驱动多业态精细化运营","category":"core-product","tags":["全渠道","业务中台","商品中心","库存管理","订单履约"],"icon":"omc-oms","heroImage":"/images/products/oms-hero.jpg","highlights":[{"metric":"20%","label":"库存周转提升"},{"metric":"80%","label":"订单处理效率提升"},{"metric":"50%","label":"渠道管理效率提升"}],"industries":["fashion","fmcg","home","beauty","pharma"],"content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
 6:null

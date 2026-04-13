@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "15b1bb00937b848090e32f16e3b7979c",
-    "previewModeSigningKey": "50c30d06a0cbcb0684bd99ce81fe13d128ab9054056ed735ce02220d502acc09",
-    "previewModeEncryptionKey": "681c0f666cb3252365f88809afd9830e268b1774d758ba767f9249f72b16c21c"
-  }
-}
+{"version":4,"routes":{"/products/omc-oms":{},"/products/distribution":{},"/products/ecommerce":{},"/products/pos":{},"/products/ai":{},"/products/ai-platform":{},"/products/ai-agent":{}},"dynamicRoutes":{"/products/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/products/[slug]","routeRegex":"^\\/products\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"ca12f3e748cb6d11d2043e911d15aac6","previewModeSigningKey":"8fe9c6883e137b5e414e143e939d88c0221872eec6fc4c8489436a456145ff47","previewModeEncryptionKey":"32e318d9825a2db732a1556c05511cb76a015f0a707c93aca646e8aeecc5b2a4"}}

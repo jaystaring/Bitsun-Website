@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[87753,["/_next/static/chunks/367e2fa32155f472.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
+2:I[87753,["/_next/static/chunks/dd03b94d4f2d4082.js","/_next/static/chunks/cfc9571a937b441e.js","/_next/static/chunks/e7a9e8f8877e8a42.js","/_next/static/chunks/4a8b809e782ad99c.js"],"default"]
 4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/efcfe394ed2458b4.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 3:Tbaa,
@@ -56,5 +56,5 @@
 - **渠道分销管控**：渠道协议执行、窜货乱价管控
 - **供应链协同**：上下游伙伴协同，提升供应链效率
 - **渠道结算管理**：多级分销分润、渠道对账自动化
-0:{"buildId":"AsCYme5M-R6bpr9EMM_61","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"distribution","title":"星澜分销管理系统","subtitle":"采购业务全程在线，实现供应链透明化管理","category":"core-product","tags":["分销","采购","供应链","B2B","结算"],"icon":"distribution","heroImage":"/images/products/distribution-hero.jpg","highlights":[{"metric":"60%","label":"订单处理效率提升"},{"metric":"50%","label":"合规成本降低"},{"metric":"100%","label":"采购透明度提升"}],"industries":["fashion","fmcg","home","beauty","pharma"],"content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"Rx-INMN_tQSPZoMEv6NB0","rsc":["$","$1","c",{"children":[["$","$L2",null,{"product":{"id":"distribution","title":"星澜分销管理系统","subtitle":"采购业务全程在线，实现供应链透明化管理","category":"core-product","tags":["分销","采购","供应链","B2B","结算"],"icon":"distribution","heroImage":"/images/products/distribution-hero.jpg","highlights":[{"metric":"60%","label":"订单处理效率提升"},{"metric":"50%","label":"合规成本降低"},{"metric":"100%","label":"采购透明度提升"}],"industries":["fashion","fmcg","home","beauty","pharma"],"content":"$3"}}],[["$","script","script-0",{"src":"/_next/static/chunks/e7a9e8f8877e8a42.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/4a8b809e782ad99c.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
 6:null

@@ -1,13 +1,11 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { getSiteConfig } from '@/lib/content';
 import ProductMatrix from '@/components/blocks/ProductMatrix';
+import ContactModal from '@/components/common/ContactModal/ContactModal';
 import styles from './page.module.css';
-
-export const metadata: Metadata = {
-  title: '产品 - 比升技术',
-  description: '比升技术产品矩阵：星澜全渠道业务中台、分销管理系统、电商管理系统、门店管理系统、智能商品运营，星智AI智能底座、企业AI场景能力智能体，提供全渠道大商品运营一站式解决方案',
-};
 
 const products = [
   {
@@ -83,6 +81,8 @@ const products = [
 ];
 
 export default function ProductsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
@@ -163,11 +163,13 @@ export default function ProductsPage() {
         <div className={styles.container}>
           <h2 className={styles.ctaTitle}>开启数智化转型之旅</h2>
           <p className={styles.ctaDesc}>联系我们，获取定制化解决方案</p>
-          <Link href="/contact/demo" className={styles.ctaButton}>
+          <button onClick={() => setIsModalOpen(true)} className={styles.ctaButton}>
             预约演示
-          </Link>
+          </button>
         </div>
       </section>
+
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
