@@ -14,7 +14,7 @@
 /coverage
 
 # next.js
-/.next/
+# /.next/  # 注释掉以支持自有服务器部署
 /out/
 
 # production
